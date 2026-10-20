@@ -1,0 +1,22 @@
+URL: http://127.0.0.1:5500/index.html
+Protocolo: HTTP/1.1
+Host: 127.0.0.1
+Puerto: 5500
+Ruta: /index.html
+Método: GET
+Código de estado: 304 Not 
+5. Con promotions.html: 404 -El servidor no pudo encontrar el archivo específico que le pedí.
+
+Roles de las tecnologías en el sitio de Rueda Libre:
+
+1. HTML (Estructura y Contenido):
+Será el encargado de construir el esqueleto y definir qué elementos se muestran en la pantalla del usuario.
+- Ejemplo concreto: La etiqueta <h1>Rueda Libre</h1> que define el título principal del negocio y las etiquetas <p> que muestran el texto de bienvenida.
+
+2. CSS (Diseño y Estética):
+Se encargará de la apariencia visual, los colores, las fuentes y la organización del espacio para que el sitio se vea atractivo.
+- Ejemplo concreto: Darle un color verde ecológico al fondo de la página, centrar el título en la pantalla y ajustar el tamaño del archivo "Logo.png" para que no ocupe todo el espacio.
+
+3. JavaScript (Interactividad y Lógica):
+Es el responsable de darle vida y comportamiento inteligente a la página, respondiendo a las acciones que realiza el usuario.
+- Ejemplo concreto: Crear un formulario interactivo donde el cliente elija cuántas horas quiere rentar una bicicleta y que un botón calcule automáticamente el precio total a pagar en tiempo real.
