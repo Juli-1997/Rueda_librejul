@@ -33,3 +33,12 @@ paginas/tarifas.html	Reservas	       reservas.html
 paginas/reservas.html	Inicio	           ../index.html
 paginas/reservas.html	Tarifas y rutas	   tarifas.html
 paginas/reservas.html	Reservas	       reservas.html
+
+ESQUEMAS DE REGIONES:
+(Encabezado):** Agrupa el nombre del negocio (`) y el menú.
+*   <nav> (Navegación): Lista de enlaces principal (<ul>, <a>).
+• <main> (Contenido Principal): Contenedor exclusivo del bloque temático de cada página. 
+(Secciones):** Bloques independientes (¿Quiénes somos?, Galería`, etc.).
+	• <article> (Artículos): Servicios individuales en Inicio (tienen sentido por sí solos).
+	• <aside> (Contenido Complementario): Lista de "Qué llevar" (Tarifas) y "Horarios" (Reservas).
+• <footer> (Pie de Página): Bloque de cierre institucional.
