@@ -42,3 +42,8 @@ ESQUEMAS DE REGIONES:
 	• <article> (Artículos): Servicios individuales en Inicio (tienen sentido por sí solos).
 	• <aside> (Contenido Complementario): Lista de "Qué llevar" (Tarifas) y "Horarios" (Reservas).
 • <footer> (Pie de Página): Bloque de cierre institucional.
+
+Elección de controles en reservas.html:
+1. Control de Opciones Únicas (<input type="radio">): Lo escogí para el "Tipo de bicicleta", debido a que las opciones (Urbana, Montaña, Eléctrica) son entre ellas excluyentes; el cliente solo puede reservar un tipo por formulario.
+2. Lista Desplegable (<select> y <option>): Lo escogí para la "Duración del alquiler", ya que optimiza el espacio de la interfaz al agrupar múltiples periodos tarifarios estándar predefinidos (1 hora, Medio día, Día completo), y así evitar errores de escritura.
+3. Campo Numérico (<input type="number">): Lo escogí para la "Cantidad de bicicletas" porque restringe la entrada de datos únicamente a caracteres numéricos, permitiendo definir límites lógicos mediante atributos nativos (min="1").
