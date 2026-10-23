@@ -96,3 +96,6 @@ Para garantizar la accesibilidad total del sitio se define la siguiente distribu
 • Botones Principales y Enlaces Activos: Fondo Verde Ruta (#1E7A4F) con texto en Blanco (#FFFFFF) (5.31:1).
 • Elementos Destacados o Alertas: Contenedores con fondo Naranja pedal (#F39A2B), utilizando obligatoriamente tipografía interna en Azul noche (#14213D) (7.20:1). 
 
+----DevTools en un párrafo(Styles, Computed)-----
+• Propiedad que SÍ hereda: font-family (o color). Al revisar el párrafo en Computed, se puede observar que adopta automáticamente 'Open Sans', sans-serif porque ésta es una propiedad tipográfica que pasa del contenedor padre (body) a sus hijos de forma nativa.
+• Propiedad que NO hereda: background-color (o padding). Se ve que el párrafo no absorbe el color de fondo como propio (su fondo por defecto permanece como transparent), sino que simplemente se visualiza el fondo del body que está detrás de él. En Styles aparece como no heredada.

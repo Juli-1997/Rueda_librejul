@@ -1,0 +1,31 @@
+:root {
+  --color-crema: #FAF6EF;
+  --color-azul-noche: #14213D;
+  --color-gris-asfalto: #5B6470;
+  --color-verde-ruta: #1E7A4F;
+  --color-naranja-pedal: #F39A2B;
+
+  --fuente-titulos: 'Montserrat', sans-serif;
+  --fuente-textos: 'Open Sans', sans-serif;
+
+  --espacio-sm: 0.5rem;  /* 8px */
+  --espacio-md: 1rem;    /* 16px */
+  --espacio-lg: 2rem;    /* 32px */
+}
+
+
+body {
+  font-family: var(--fuente-textos);
+  font-weight: 400;
+  color: var(--color-azul-noche);
+  background-color: var(--color-crema);
+  padding: var(--espacio-lg);
+  margin: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  margin-bottom: var(--espacio-md);
+}
