@@ -28,21 +28,26 @@
 
         <section>
             <h2>Formulario de reserva</h2>
+            <!-- Conserva tu acción a Formspree -->
             <form action="https://formspree.io" method="post">
                 
                 <fieldset>
                     <legend>Tus datos</legend>
                     <p>
                         <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                        <input type="text" id="nombre" name="nombre" minlength="3" required>
+                    </p>
+                    <p>
+                        <label for="documento">Documento de identidad:</label>
+                        <input type="text" id="documento" name="documento" pattern="[0-9]{6,10}" title="El documento debe contener solo números, entre 6 y 10 dígitos." required>
                     </p>
                     <p>
                         <label for="correo">Correo electrónico:</label>
                         <input type="email" id="correo" name="correo" required>
                     </p>
                     <p>
-                        <label for="telefono">Teléfono de contacto:</label>
-                        <input type="tel" id="telefono" name="telefono" required>
+                        <label for="celular">Teléfono celular de contacto:</label>
+                        <input type="tel" id="celular" name="celular" pattern="3[0-9]{9}" title="El celular debe tener 10 dígitos y comenzar con el número 3." required>
                     </p>
                 </fieldset>
 
@@ -50,12 +55,12 @@
                     <legend>Tu alquiler</legend>
                     <p>
                         <label for="fecha">Fecha de reserva:</label>
-                        <input type="date" id="fecha" name="fecha_reserva" required>
+                        <input type="date" id="fecha" name="fecha_reserva" min="2026-11-01" max="2026-12-31" required>
                     </p>
                     
                     <p>Tipo de bicicleta:</p>
                     <p>
-                        <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana" checked>
+                        <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana" checked required>
                         <label for="urbana">Urbana</label>
                     </p>
                     <p>
@@ -69,12 +74,13 @@
 
                     <p>
                         <label for="cantidad">Cantidad de bicicletas:</label>
-                        <input type="number" id="cantidad" name="cantidad_bicis" min="1" max="10" value="1" required>
+                        <input type="number" id="cantidad" name="cantidad_bicis" min="1" max="6" value="1" required>
                     </p>
 
                     <p>
-                        <label for="duracion">Duración del alquiler:</label>
-                        <select id="duracion" name="duracion_alquiler">
+                        <label for="duracion">Duración del alquiler (Plan):</label>
+                        <select id="duracion" name="duracion_alquiler" required>
+                            <option value="" disabled selected>Selecciona un plan...</option>
                             <option value="1h">1 Hora</option>
                             <option value="4h">Medio día (4 horas)</option>
                             <option value="dia">Día completo</option>
@@ -83,7 +89,7 @@
 
                     <p>
                         <label for="notas">Notas especiales o comentarios:</label><br>
-                        <textarea id="notas" name="comentarios" rows="4" cols="40" placeholder="Ej: Necesito silla para niños, estatura de los ciclistas..."></textarea>
+                        <textarea id="notas" name="comentarios" rows="4" cols="40" maxlength="300" placeholder="Ej: Necesito silla para niños, estatura de los ciclistas..."></textarea>
                     </p>
                 </fieldset>
 
@@ -120,3 +126,4 @@
 
 </body>
 </html>
+

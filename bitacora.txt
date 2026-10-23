@@ -47,3 +47,52 @@ Elección de controles en reservas.html:
 1. Control de Opciones Únicas (<input type="radio">): Lo escogí para el "Tipo de bicicleta", debido a que las opciones (Urbana, Montaña, Eléctrica) son entre ellas excluyentes; el cliente solo puede reservar un tipo por formulario.
 2. Lista Desplegable (<select> y <option>): Lo escogí para la "Duración del alquiler", ya que optimiza el espacio de la interfaz al agrupar múltiples periodos tarifarios estándar predefinidos (1 hora, Medio día, Día completo), y así evitar errores de escritura.
 3. Campo Numérico (<input type="number">): Lo escogí para la "Cantidad de bicicletas" porque restringe la entrada de datos únicamente a caracteres numéricos, permitiendo definir límites lógicos mediante atributos nativos (min="1").
+
+-------Prueba de validación en el Formulario de reservas.html:---------
+
+Campo	    Dato de prueba	     Resultado esperado y obtenido
+Nombre	    Al	                 Rechazado por corto (mínimo 3 letras).
+Documento	12345 / abc12	     Rechazado por formato (6 a 10 números).
+Correo	    test.com	         Rechazado por falta de @.
+Celular	    4123456789	         Rechazado por no empezar con 3 o no tener 10 dígitos.
+Fecha	    2026-10-15	         Rechazado por estar fuera de rango (Nov-Dic 2026).
+Cantidad	7	                 En el navegador se bloquea por exceder el máximo (6).
+Plan	    Ninguno	             Bloqueado. Exige elegir una opción.
+Términos	Desmarcado	         Bloqueado. Es obligatorio marcar la casilla.
+
+Auditoría de accesibilidad(Hallazgos-correcciones)
+Tras la inspección técnica de las tres páginas (index.html, tarifas.html y reservas.html), se registraron y corrigieron los siguientes elementos para cumplir con los estándares de accesibilidad:
+• Hallazgo 1 (Idioma del documento): En las páginas locales se detectó la falta del atributo de idioma o inconsistencias en la etiqueta raíz.
+	Corrección: Se garantizó de manera uniforme <html lang="es"> en las cabeceras para que los lectores de pantalla utilicen la síntesis de voz en español correctamente.
+
+• Hallazgo 2 (Jerarquía de encabezados): En el archivo reservas.html existían dos etiquetas consecutivas con nivel <h1> (<h1>Rueda Libre</h1> y <h1>Reserva tu bicicleta</h1>).
+	Corrección: Se modificó el segundo título por un nivel estructural jerárquico correcto: <h2>Reserva tu bicicleta</h2>, logrando un flujo de lectura secuencial.
+
+• Hallazgo 3 (Textos de enlace contextuales): Se encontraron enlaces con el texto genérico "Ver más" o rutas de archivo directas en el menú de navegación que carecían de sentido fuera de contexto.
+	Corrección: Se reescribieron por textos explícitos y descriptivos orientados a la acción (ej. href="tarifas.html" ahora expone textualmente "Tarifas y rutas").
+
+• Hallazgo 4 (Textos alternativos en imágenes): Las imágenes decorativas de las rutas carecían del atributo alt, lo que provocaba que los lectores de pantalla leyeran los nombres internos del archivo (.jpg).
+	Corrección: Se añadió alt="" (vacío) a las imágenes meramente ornamentales y textos alternativos funcionales y descriptivos a las fotografías principales del equipamiento.
+
+• Hallazgo 5 (Navegación por teclado): Los controles nativos del formulario se estructuraron secuencialmente. Se verificó que con la tecla Tab y Shift + Tab el foco avanza lógicamente por los inputs, las flechas direccionales operan las opciones de tipo de bicicleta (radio) y el botón procesa el envío con Enter.
+
+----Validación de contrastes para la página-----
+
+Combinación de Colores	                              Relación de Contraste	  Clasificación de Accesibilidad (WCAG)
+Blanco (#FFFFFF) sobre Verde Ruta (#1E7A4F)	          5.31 : 1	              Apta para texto normal y texto grande.
+Blanco (#FFFFFF) sobre Naranja Pedal (#F39A2B)	      2.22 : 1	      		  No apta (Contraste insuficiente).
+Azul Noche (#14213D) sobre Naranja Pedal (#F39A2B)	  7.20 : 1				  Apta para texto normal y texto grande.
+Azul Noche (#14213D) sobre Crema (#FAF6EF)	          14.83 : 1				  Apta para texto normal y texto grande.
+Gris Asfalto (#5B6470) sobre Crema (#FAF6EF)	      5.57 : 1				  Apta para texto normal y texto grande.
+Verde Ruta (#1E7A4F) sobre Crema (#FAF6EF)	          4.93 : 1	 			  Apta para texto normal y texto grande.
+Naranja Pedal (#F39A2B) sobre Crema (#FAF6EF)	      2.06 : 1	 			  No apta (Contraste insuficiente).
+Blanco (#FFFFFF) sobre Azul Noche (#14213D)	          15.97 : 1				  Apta para texto normal y texto grande.
+
+----Mapa Definitivo de Uso del Color para CSS----
+Para garantizar la accesibilidad total del sitio se define la siguiente distribución de estilos basada estrictamente en los resultados aprobados de la tabla de contraste:
+• Fondo General de la Web: Crema (#FAF6EF) que proporciona una base cálida y de alta legibilidad.
+• Texto Principal (Encabezados y párrafos): Azul noche (#14213D) sobre fondo Crema. Supera ampliamente los requisitos de contraste (14.83:1).
+• Texto Secundario (Descripciones menores y Aside): Gris asfalto (#5B6470) sobre fondo Crema (5.57:1).
+• Botones Principales y Enlaces Activos: Fondo Verde Ruta (#1E7A4F) con texto en Blanco (#FFFFFF) (5.31:1).
+• Elementos Destacados o Alertas: Contenedores con fondo Naranja pedal (#F39A2B), utilizando obligatoriamente tipografía interna en Azul noche (#14213D) (7.20:1). 
+
