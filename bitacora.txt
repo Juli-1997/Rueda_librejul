@@ -98,4 +98,4 @@ Para garantizar la accesibilidad total del sitio se define la siguiente distribu
 
 ----DevTools en un párrafo(Styles, Computed)-----
 • Propiedad que SÍ hereda: font-family (o color). Al revisar el párrafo en Computed, se puede observar que adopta automáticamente 'Open Sans', sans-serif porque ésta es una propiedad tipográfica que pasa del contenedor padre (body) a sus hijos de forma nativa.
-• Propiedad que NO hereda: background-color (o padding). Se ve que el párrafo no absorbe el color de fondo como propio (su fondo por defecto permanece como transparent), sino que simplemente se visualiza el fondo del body que está detrás de él. En Styles aparece como no heredada..
+• Propiedad que NO hereda: background-color (o padding). Se ve que el párrafo no absorbe el color de fondo como propio (su fondo por defecto permanece como transparent), sino que simplemente se visualiza el fondo del body que está detrás de él. En Styles aparece como no heredada.
