@@ -106,3 +106,18 @@ Para garantizar la accesibilidad total del sitio se define la siguiente distribu
 
 Causa del problema:
 La clase .activo no se aplica (no cambia el color del enlace) porque el selector (#menu a) tiene mayor especificidad que el selector de clase simple (.activo). Como un ID (#menu) pesa mucho más que una clase, el navegador ignora el color verde aunque .activo se declare más abajo en el CSS.
+
+
+----Medición ANTES de aplicar box-sizing: border-box; (Modelo content-box)----
+	• Ancho base del contenido (width): 724px
+	• Relleno Izquierdo/Derecho (padding-left + padding-right): 32px + 32px = 64px
+	• Borde Izquierdo/Derecho (border): 1px + 1px = 2px
+	• Cálculo del Ancho Total Teórico:
+			724px+64px+2px=790px
+	• Problema: El elemento ocuparía en total 790px en la pantalla, desalineando las tarjetas
+
+-----Medición DESPUÉS de aplicar box-sizing: border-box; (Tu captura actual) Como ya apliqué box-sizing: border-box, el navegador recalculó el espacio interior. El ancho total se fijó en el espacio disponible de la pantalla (724px en este momento de la ventana) y comprimió los rellenos hacia adentro. Ancho Total Real en Pantalla: 724px
+Relleno Izquierdo/Derecho: Ocupan 32px + 32px = 64px internos.
+Espacio útil real para tus textos/imágenes dentro de la tarjeta:724px-64px=660px
+
+

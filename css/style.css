@@ -13,6 +13,103 @@
   --espacio-lg: 2rem;    
 }
 
+*, *::before, *::after {
+  box-sizing: border-box; 
+}
+
+main {
+  max-width: 65rem; 
+  margin: 0 auto;   
+  padding: 2rem;    
+}
+
+.portada {
+  min-height: 60vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu li {
+  display: inline-block; 
+  margin-right: 1.5rem;  
+}
+
+
+article {
+  background-color: var(--color-crema);
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 8px;      
+  padding: 1.5rem;          
+  margin-bottom: 2rem;     
+  display: inline-block;    
+  vertical-align: top;
+  width: 100%;           
+}
+
+article img {
+  width: 100%;             
+  height: auto;
+  border-radius: 4px;      
+  margin-bottom: 1rem;     
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; 
+  margin: 2rem 0;
+}
+
+th, td {
+  border: 1px solid var(--color-gris-asfalto);
+  padding: 0.75rem 1rem;                  
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-azul-noche);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.5rem; 
+}
+
+.form-group label {
+  display: block;       
+  margin-bottom: 0.5rem; 
+  color: var(--color-azul-noche);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block;
+  width: 100%;           
+  padding: 0.75rem;      
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+form button, 
+form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;   
+  background-color: var(--color-verde-ruta);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
 
 #menu a {
   color: var(--color-gris-asfalto);
