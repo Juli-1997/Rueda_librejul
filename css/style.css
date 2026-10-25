@@ -8,9 +8,9 @@
   --fuente-titulos: 'Montserrat', sans-serif;
   --fuente-textos: 'Open Sans', sans-serif;
 
-  --espacio-sm: 0.5rem;  /* 8px */
-  --espacio-md: 1rem;    /* 16px */
-  --espacio-lg: 2rem;    /* 32px */
+  --espacio-sm: 0.5rem; 
+  --espacio-md: 1rem;    
+  --espacio-lg: 2rem;    
 }
 
 
