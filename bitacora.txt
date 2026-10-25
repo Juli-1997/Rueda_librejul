@@ -99,3 +99,10 @@ Para garantizar la accesibilidad total del sitio se define la siguiente distribu
 ----DevTools en un párrafo(Styles, Computed)-----
 • Propiedad que SÍ hereda: font-family (o color). Al revisar el párrafo en Computed, se puede observar que adopta automáticamente 'Open Sans', sans-serif porque ésta es una propiedad tipográfica que pasa del contenedor padre (body) a sus hijos de forma nativa.
 • Propiedad que NO hereda: background-color (o padding). Se ve que el párrafo no absorbe el color de fondo como propio (su fondo por defecto permanece como transparent), sino que simplemente se visualiza el fondo del body que está detrás de él. En Styles aparece como no heredada.
+
+----Análisis de Especificidad----
+• #menu a tiene una especificidad de 1 0 1 (1 ID + 1 elemento).
+• .activo tiene una especificidad de 0 1 0 (1 clase).
+
+Causa del problema:
+La clase .activo no se aplica (no cambia el color del enlace) porque el selector (#menu a) tiene mayor especificidad que el selector de clase simple (.activo). Como un ID (#menu) pesa mucho más que una clase, el navegador ignora el color verde aunque .activo se declare más abajo en el CSS.

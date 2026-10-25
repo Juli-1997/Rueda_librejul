@@ -14,6 +14,65 @@
 }
 
 
+#menu a {
+  color: var(--color-gris-asfalto);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#menu a.activo {
+  color: var(--color-verde-ruta);
+  font-weight: 600;
+}
+
+#menu a:hover,
+#menu a:focus {
+  color: var(--color-azul-noche);
+  background-color: rgba(20, 33, 61, 0.08); 
+  outline: none; 
+  border-bottom: 2px solid var(--color-azul-noche);
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: var(--color-verde-ruta);
+  color: #FFFFFF !important; /* Garantiza el texto blanco */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: var(--color-azul-noche);
+  color: #FFFFFF !important;
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-naranja-pedal); 
+}
+
+input, select, textarea {
+  border: 1px solid var(--color-gris-asfalto);
+  padding: 8px;
+  border-radius: 4px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+input[type="radio"]:focus + label {
+  outline: none; 
+  border-color: var(--color-verde-ruta);
+  box-shadow: 0 0 0 3px rgba(30, 122, 79, 0.4);
+}
+
+
+
 body {
   font-family: var(--fuente-textos);
   font-weight: 400;
