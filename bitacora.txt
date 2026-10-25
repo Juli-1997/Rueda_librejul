@@ -121,3 +121,45 @@ Relleno Izquierdo/Derecho: Ocupan 32px + 32px = 64px internos.
 Espacio útil real para textos/imágenes dentro de la tarjeta:724px-64px=660px
 
 
+Resumen de los MiniRetos - SEMANA 1 (RUEDA LIBRE)
+
+• MiniReto 1: Kilómetro 0: el repositorio y la página base
+  - Lo que construí: Configuración del entorno de trabajo git, inicialización del repositorio local y creación del documento HTML base, analizando la comunicación cliente-servidor desde las DevTools.
+
+• MiniReto 2: La vitrina de Rueda Libre
+  - Lo que construí: Estructuración completa del contenido de la página de inicio respetando una estricta jerarquía de encabezados (h1 a h3), párrafos de contenido, listas informativas, imágenes y enlaces.
+
+• MiniReto 3: Tarifas claras: tablas y rutas relativas
+  - Lo que construí: Presentación de datos tabulares a través de tablas de datos accesibles (usando th y td) y vinculación efectiva de los archivos distribuidos en carpetas separadas mediante rutas relativas funcionales.
+
+• MiniReto 4: Rueda Libre v0.1: un sitio navigable
+  - Lo que construí: Integración inicial del ecosistema web enlazando las tres páginas del sitio a través de una barra de menú consistente y bloques finales (footer) compartidos en común.
+
+• MiniReto 5: Estructura con significado
+  - Lo que construí: Reestructuración semántica profunda de las tres páginas reemplazando divs por etiquetas semánticas de HTML5 (<header>, <nav>, <main>, <article>, <footer>) manteniendo intactos los flujos de navegación.
+
+• MiniReto 6: El formulario de reservas
+  - Lo que construí: Construcción de la interfaz de captura de datos en reservas.html, seleccionando y organizando cuidadosamente los controles de formulario óptimos (tipo radio, select e inputs textuales) para cada tipo de dato.
+
+• MiniReto 7: Reservas sin errores: validación y teclado
+  - Lo que construí: Aplicación de reglas de negocio mediante atributos nativos de validación en HTML5 (required, min, max, patterns) y control de accesibilidad asegurando la plena usabilidad del sitio mediante navegación secuencial con el teclado (Tab).
+
+• MiniReto 8: Rueda Libre v0.2 en línea: accesible y publicada
+  - Lo que construí: Auditoría exhaustiva y corrección de la accesibilidad del sitio web. Validación matemática del contraste cromático de la paleta de marca y despliegue del proyecto en vivo a través de GitHub Pages.
+
+• MiniReto 9: La identidad de Rueda Libre
+  - Lo que construí: Creación y vinculación de la hoja de estilos externa (styles.css). Declaración de variables personalizadas (:root), integración de tipografías legibles desde Google Fonts ('Montserrat' y 'Open Sans') y aplicación de colores corporativos por herencia.
+
+• MiniReto 10: Navegación con estados y sin conflictos
+  - Lo que construí: Estilización completa de la barra de navegación, enlaces de menú, botones y cajas del formulario mediante combinaciones de selectores de clase, descendientes y pseudoclases (:hover, :focus), resolviendo los conflictos técnicos de cascada y especificidad heredados.
+
+• MiniReto 11: Todo en su lugar: modelo de caja
+  - Lo que construí: Control de tamaño y espaciado de toda la interfaz web mediante el uso universal del Box Model (box-sizing: border-box), márgenes automáticos para centrado, y unidades de medida relativas adaptables (rem, %, vh).
+
+• MiniReto 12: Rueda Libre v1.0: lanzamiento
+  - Lo que construí: Implementación avanzada de posicionamiento complejo en los últimos componentes (capas flotantes absolute para la etiqueta "Nuevo" sin romper el flujo físico, y position: fixed para el enlace de WhatsApp). Consolidación estética de estilos y lanzamiento de la v1.0 oficial.
+
+
+---MEJORAS FUTURAS---
+
+1. Reemplazar las imágenes fijas con fondo nativo por formatos vectoriales SVG o WebP transparentes para optimizar la contención visual y la velocidad de carga en GitHub Pages..
