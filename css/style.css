@@ -39,7 +39,7 @@
 .btn-cta {
   display: inline-block;
   background-color: var(--color-verde-ruta);
-  color: #FFFFFF !important; /* Garantiza el texto blanco */
+  color: #FFFFFF !important;
   padding: 10px 20px;
   border-radius: 4px;
   text-decoration: none;
