@@ -34,14 +34,14 @@ paginas/reservas.html	Inicio	           ../index.html
 paginas/reservas.html	Tarifas y rutas	   tarifas.html
 paginas/reservas.html	Reservas	       reservas.html
 
-ESQUEMAS DE REGIONES:
+-----ESQUEMAS DE REGIONES: -----
 (Encabezado):** Agrupa el nombre del negocio (`) y el menú.
 *   <nav> (Navegación): Lista de enlaces principal (<ul>, <a>).
 • <main> (Contenido Principal): Contenedor exclusivo del bloque temático de cada página. 
 (Secciones):** Bloques independientes (¿Quiénes somos?, Galería`, etc.).
 	• <article> (Artículos): Servicios individuales en Inicio (tienen sentido por sí solos).
 	• <aside> (Contenido Complementario): Lista de "Qué llevar" (Tarifas) y "Horarios" (Reservas).
-• <footer> (Pie de Página): Bloque de cierre institucional.
+• <footer> (Pie de Página): Bloque de cierre.
 
 Elección de controles en reservas.html:
 1. Control de Opciones Únicas (<input type="radio">): Lo escogí para el "Tipo de bicicleta", debido a que las opciones (Urbana, Montaña, Eléctrica) son entre ellas excluyentes; el cliente solo puede reservar un tipo por formulario.
@@ -89,7 +89,7 @@ Naranja Pedal (#F39A2B) sobre Crema (#FAF6EF)	      2.06 : 1	 			  No apta (Cont
 Blanco (#FFFFFF) sobre Azul Noche (#14213D)	          15.97 : 1				  Apta para texto normal y texto grande.
 
 ----Mapa Definitivo de Uso del Color para CSS----
-Para garantizar la accesibilidad total del sitio se define la siguiente distribución de estilos basada estrictamente en los resultados aprobados de la tabla de contraste:
+Para garantizar la accesibilidad total del sitio defino la siguiente distribución de estilos basada estrictamente en los resultados aprobados de la tabla de contraste:
 • Fondo General de la Web: Crema (#FAF6EF) que proporciona una base cálida y de alta legibilidad.
 • Texto Principal (Encabezados y párrafos): Azul noche (#14213D) sobre fondo Crema. Supera ampliamente los requisitos de contraste (14.83:1).
 • Texto Secundario (Descripciones menores y Aside): Gris asfalto (#5B6470) sobre fondo Crema (5.57:1).
@@ -97,7 +97,7 @@ Para garantizar la accesibilidad total del sitio se define la siguiente distribu
 • Elementos Destacados o Alertas: Contenedores con fondo Naranja pedal (#F39A2B), utilizando obligatoriamente tipografía interna en Azul noche (#14213D) (7.20:1). 
 
 ----DevTools en un párrafo(Styles, Computed)-----
-• Propiedad que SÍ hereda: font-family (o color). Al revisar el párrafo en Computed, se puede observar que adopta automáticamente 'Open Sans', sans-serif porque ésta es una propiedad tipográfica que pasa del contenedor padre (body) a sus hijos de forma nativa.
+• Propiedad que SÍ hereda: font-family (o color). Al revisar el párrafo en Computed, pude observar que adopta automáticamente 'Open Sans', sans-serif porque ésta es una propiedad tipográfica que pasa del contenedor padre (body) a sus hijos de forma nativa.
 • Propiedad que NO hereda: background-color (o padding). Se ve que el párrafo no absorbe el color de fondo como propio (su fondo por defecto permanece como transparent), sino que simplemente se visualiza el fondo del body que está detrás de él. En Styles aparece como no heredada.
 
 ----Análisis de Especificidad----
@@ -116,8 +116,8 @@ La clase .activo no se aplica (no cambia el color del enlace) porque el selector
 			724px+64px+2px=790px
 	• Problema: El elemento ocuparía en total 790px en la pantalla, desalineando las tarjetas
 
------Medición DESPUÉS de aplicar box-sizing: border-box; (Tu captura actual) Como ya apliqué box-sizing: border-box, el navegador recalculó el espacio interior. El ancho total se fijó en el espacio disponible de la pantalla (724px en este momento de la ventana) y comprimió los rellenos hacia adentro. Ancho Total Real en Pantalla: 724px
+-----Medición DESPUÉS de aplicar box-sizing: border-box; Como ya apliqué box-sizing: border-box, el navegador recalculó el espacio interior. El ancho total se fijó en el espacio disponible de la pantalla (724px en este momento de la ventana) y comprimió los rellenos hacia adentro. Ancho Total Real de Pantalla: 724px
 Relleno Izquierdo/Derecho: Ocupan 32px + 32px = 64px internos.
-Espacio útil real para tus textos/imágenes dentro de la tarjeta:724px-64px=660px
+Espacio útil real para textos/imágenes dentro de la tarjeta:724px-64px=660px
 
 
