@@ -19,7 +19,7 @@ Se encargará de la apariencia visual, los colores, las fuentes y la organizaci�
 
 3. JavaScript (Interactividad y Lógica):
 Es el responsable de darle vida y comportamiento inteligente a la página, respondiendo a las acciones que realiza el usuario.
-- Ejemplo concreto: Crear un formulario interactivo donde el cliente elija cuántas horas quiere rentar una bicicleta y que un botón calcule automáticamente el precio total a pagar en tiempo real.
+- Ejemplo concreto: Crear un formulario interactivo donde el cliente elija cuántas horas quiere rentar una bicicleta y que un botón calcule automáticamente el precio total a pagar en tiempo real..
 
 Rutas para las los archivos y sus paginas:
 
@@ -34,14 +34,14 @@ paginas/reservas.html	Inicio	           ../index.html
 paginas/reservas.html	Tarifas y rutas	   tarifas.html
 paginas/reservas.html	Reservas	       reservas.html
 
-ESQUEMAS DE REGIONES:
+-----ESQUEMAS DE REGIONES: -----
 (Encabezado):** Agrupa el nombre del negocio (`) y el menú.
 *   <nav> (Navegación): Lista de enlaces principal (<ul>, <a>).
 • <main> (Contenido Principal): Contenedor exclusivo del bloque temático de cada página. 
 (Secciones):** Bloques independientes (¿Quiénes somos?, Galería`, etc.).
 	• <article> (Artículos): Servicios individuales en Inicio (tienen sentido por sí solos).
 	• <aside> (Contenido Complementario): Lista de "Qué llevar" (Tarifas) y "Horarios" (Reservas).
-• <footer> (Pie de Página): Bloque de cierre institucional.
+• <footer> (Pie de Página): Bloque de cierre.
 
 Elección de controles en reservas.html:
 1. Control de Opciones Únicas (<input type="radio">): Lo escogí para el "Tipo de bicicleta", debido a que las opciones (Urbana, Montaña, Eléctrica) son entre ellas excluyentes; el cliente solo puede reservar un tipo por formulario.
@@ -89,7 +89,7 @@ Naranja Pedal (#F39A2B) sobre Crema (#FAF6EF)	      2.06 : 1	 			  No apta (Cont
 Blanco (#FFFFFF) sobre Azul Noche (#14213D)	          15.97 : 1				  Apta para texto normal y texto grande.
 
 ----Mapa Definitivo de Uso del Color para CSS----
-Para garantizar la accesibilidad total del sitio se define la siguiente distribución de estilos basada estrictamente en los resultados aprobados de la tabla de contraste:
+Para garantizar la accesibilidad total del sitio defino la siguiente distribución de estilos basada estrictamente en los resultados aprobados de la tabla de contraste:
 • Fondo General de la Web: Crema (#FAF6EF) que proporciona una base cálida y de alta legibilidad.
 • Texto Principal (Encabezados y párrafos): Azul noche (#14213D) sobre fondo Crema. Supera ampliamente los requisitos de contraste (14.83:1).
 • Texto Secundario (Descripciones menores y Aside): Gris asfalto (#5B6470) sobre fondo Crema (5.57:1).
@@ -97,5 +97,75 @@ Para garantizar la accesibilidad total del sitio se define la siguiente distribu
 • Elementos Destacados o Alertas: Contenedores con fondo Naranja pedal (#F39A2B), utilizando obligatoriamente tipografía interna en Azul noche (#14213D) (7.20:1). 
 
 ----DevTools en un párrafo(Styles, Computed)-----
-• Propiedad que SÍ hereda: font-family (o color). Al revisar el párrafo en Computed, se puede observar que adopta automáticamente 'Open Sans', sans-serif porque ésta es una propiedad tipográfica que pasa del contenedor padre (body) a sus hijos de forma nativa.
+• Propiedad que SÍ hereda: font-family (o color). Al revisar el párrafo en Computed, pude observar que adopta automáticamente 'Open Sans', sans-serif porque ésta es una propiedad tipográfica que pasa del contenedor padre (body) a sus hijos de forma nativa.
 • Propiedad que NO hereda: background-color (o padding). Se ve que el párrafo no absorbe el color de fondo como propio (su fondo por defecto permanece como transparent), sino que simplemente se visualiza el fondo del body que está detrás de él. En Styles aparece como no heredada.
+
+----Análisis de Especificidad----
+• #menu a tiene una especificidad de 1 0 1 (1 ID + 1 elemento).
+• .activo tiene una especificidad de 0 1 0 (1 clase).
+
+Causa del problema:
+La clase .activo no se aplica (no cambia el color del enlace) porque el selector (#menu a) tiene mayor especificidad que el selector de clase simple (.activo). Como un ID (#menu) pesa mucho más que una clase, el navegador ignora el color verde aunque .activo se declare más abajo en el CSS.
+
+
+----Medición ANTES de aplicar box-sizing: border-box; (Modelo content-box)----
+	• Ancho base del contenido (width): 724px
+	• Relleno Izquierdo/Derecho (padding-left + padding-right): 32px + 32px = 64px
+	• Borde Izquierdo/Derecho (border): 1px + 1px = 2px
+	• Cálculo del Ancho Total Teórico:
+			724px+64px+2px=790px
+	• Problema: El elemento ocuparía en total 790px en la pantalla, desalineando las tarjetas
+
+-----Medición DESPUÉS de aplicar box-sizing: border-box; Como ya apliqué box-sizing: border-box, el navegador recalculó el espacio interior. El ancho total se fijó en el espacio disponible de la pantalla (724px en este momento de la ventana) y comprimió los rellenos hacia adentro. Ancho Total Real de Pantalla: 724px
+Relleno Izquierdo/Derecho: Ocupan 32px + 32px = 64px internos.
+Espacio útil real para textos/imágenes dentro de la tarjeta:724px-64px=660px
+
+
+Resumen de los MiniRetos - SEMANA 1 (RUEDA LIBRE)
+
+• MiniReto 1: Kilómetro 0: el repositorio y la página base
+  - Lo que construí: Configuración del entorno de trabajo git, inicialización del repositorio local y creación del documento HTML base, analizando la comunicación cliente-servidor desde las DevTools.
+
+• MiniReto 2: La vitrina de Rueda Libre
+  - Lo que construí: Estructuración completa del contenido de la página de inicio respetando una estricta jerarquía de encabezados (h1 a h3), párrafos de contenido, listas informativas, imágenes y enlaces.
+
+• MiniReto 3: Tarifas claras: tablas y rutas relativas
+  - Lo que construí: Presentación de datos tabulares a través de tablas de datos accesibles (usando th y td) y vinculación efectiva de los archivos distribuidos en carpetas separadas mediante rutas relativas funcionales.
+
+• MiniReto 4: Rueda Libre v0.1: un sitio navigable
+  - Lo que construí: Integración inicial del ecosistema web enlazando las tres páginas del sitio a través de una barra de menú consistente y bloques finales (footer) compartidos en común.
+
+• MiniReto 5: Estructura con significado
+  - Lo que construí: Reestructuración semántica profunda de las tres páginas reemplazando divs por etiquetas semánticas de HTML5 (<header>, <nav>, <main>, <article>, <footer>) manteniendo intactos los flujos de navegación.
+
+• MiniReto 6: El formulario de reservas
+  - Lo que construí: Construcción de la interfaz de captura de datos en reservas.html, seleccionando y organizando cuidadosamente los controles de formulario óptimos (tipo radio, select e inputs textuales) para cada tipo de dato.
+
+• MiniReto 7: Reservas sin errores: validación y teclado
+  - Lo que construí: Aplicación de reglas de negocio mediante atributos nativos de validación en HTML5 (required, min, max, patterns) y control de accesibilidad asegurando la plena usabilidad del sitio mediante navegación secuencial con el teclado (Tab).
+
+• MiniReto 8: Rueda Libre v0.2 en línea: accesible y publicada
+  - Lo que construí: Auditoría exhaustiva y corrección de la accesibilidad del sitio web. Validación matemática del contraste cromático de la paleta de marca y despliegue del proyecto en vivo a través de GitHub Pages.
+
+• MiniReto 9: La identidad de Rueda Libre
+  - Lo que construí: Creación y vinculación de la hoja de estilos externa (styles.css). Declaración de variables personalizadas (:root), integración de tipografías legibles desde Google Fonts ('Montserrat' y 'Open Sans') y aplicación de colores corporativos por herencia.
+
+• MiniReto 10: Navegación con estados y sin conflictos
+  - Lo que construí: Estilización completa de la barra de navegación, enlaces de menú, botones y cajas del formulario mediante combinaciones de selectores de clase, descendientes y pseudoclases (:hover, :focus), resolviendo los conflictos técnicos de cascada y especificidad heredados.
+
+• MiniReto 11: Todo en su lugar: modelo de caja
+  - Lo que construí: Control de tamaño y espaciado de toda la interfaz web mediante el uso universal del Box Model (box-sizing: border-box), márgenes automáticos para centrado, y unidades de medida relativas adaptables (rem, %, vh).
+
+• MiniReto 12: Rueda Libre v1.0: lanzamiento
+  - Lo que construí: Implementación avanzada de posicionamiento complejo en los últimos componentes (capas flotantes absolute para la etiqueta "Nuevo" sin romper el flujo físico, y position: fixed para el enlace de WhatsApp). Consolidación estética de estilos y lanzamiento de la v1.0 oficial.
+
+
+---MEJORAS FUTURAS---
+
+1. Reemplazar las imágenes fijas con fondo nativo por formatos vectoriales SVG o WebP transparentes para optimizar la contención visual y la velocidad de carga en GitHub Pages..
+
+
+-----SEMANA 2-----
+-----comportamiento del encabezado y pie de página(con flex)-----
+-Encabezado: Cuando se estrecha la pantalla(o el espacio que tenía originalmente para ver) el contenido o menú se correo, o se baja y acomoda gracias a flex-wrap.
+-Pie de página: Los tres bloques(Marca, Contacto, Horarios) pasan a estar en fila. La propiedad gap mantiene una separación limpia y uniforme en todo momento.

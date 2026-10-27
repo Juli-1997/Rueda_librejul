@@ -14,10 +14,10 @@
 <body>
 
     <header>
-        <h1>Rueda Libre</h1>
+        <div class="logo"><h1>Rueda Libre</h1></div>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
+            <ul id="menu">
+                <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
                 <li><a href="paginas/reservas.html">Reservas</a></li>
             </ul>
@@ -32,7 +32,7 @@
 
         <section>
             <h2>Nuestros servicios</h2>
-            <p>¿Listo para rodar? <a href="paginas/reservas.html">¡Reservar ahora!</a></p>
+            <p>¿Listo para rodar? <a href="paginas/reservas.html" class="btn-cta">¡Reservar ahora!</a></p>
             
             <article>
                 <h3>Renta por horas</h3>
@@ -43,6 +43,17 @@
                 <h3>Tours guiados</h3>
                 <p>Descubre los lugares más icónicos de la ciudad con un guía experto. El servicio <strong>incluye hidratación y asistencia médica</strong>. Consulta las rutas y precios directamente en la sección de <a href="paginas/tarifas.html#tabla-recorridos">recorridos guiados</a>.</p>
             </article>
+
+            <article>
+                <div class="tarjeta-media">
+                    <span class="badge-nuevo">Nuevo</span>
+                    <img src="img/bici-electrica.jpg" alt="Bicicleta eléctrica de alquiler de Rueda Libre">
+                </div>
+                <h3>Bicicletas Eléctricas</h3>
+                <p>Muévete con nada de esfuerzo por la ciudad con nuestros modelos eléctricos de última generación.</p>
+            </article>
+
+
         </section>
 
         <section>
@@ -79,9 +90,30 @@
     </main>
 
     <footer>
-        <p>© 2026 Rueda Libre | Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
+        <div class="footer-bloque">
+            <h3>Rueda Libre</h3>
+            <p>© 2026 Rueda Libre</p>
+        </div>
+
+        <div class="footer-bloque">
+            <h3>Contáctanos</h3>
+            <dl>
+                <dt>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></dt>
+                <dt>WhatsApp: <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">300 000 0000</a></dt>
+            </dl>
+        </div>
+
+        <div>   
+            <h3>Horario de atención</h3>
+            <dl>
+                <dt>Lunes a Viernes</dt>
+                <dd>7:00 a. m. a 7:00 p. m.</dd>
+                <dt>Sábados, Domingos y Festivos</dt>
+                <dd>6:00 a. m. a 2:00 p. m.</dd>
+            </dl>
+        </div>
     </footer>
+
 
 </body>
 </html>
-
