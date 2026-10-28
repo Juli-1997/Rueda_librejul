@@ -14,7 +14,9 @@
 <body>
 
     <header>
-        <div class="logo"><h1>Rueda Libre</h1></div>
+        <div class="logo">
+            <h1>Rueda Libre</h1>
+        </div>
         <nav>
             <ul id="menu">
                 <li><a href="index.html" class="activo">Inicio</a></li>
@@ -23,27 +25,67 @@
             </ul>
         </nav>
     </header>
+         <section class="portada">
+        <div class="portada-texto">
+            <h2>¿Quiénes somos?</h2>
+            <p>Somos una empresa apasionada por la movilidad sostenible en Medellín. Queremos que explores la ciudad de una forma única, divertida y ecológica.</p>
+            <br>
+            <a href="paginas/reservas.html" class="btn-cta">¡Reservar ahora!</a>
+        </div>
+        <div class="portada-imagen">
+            <img src="img/portada_fina.jpg" alt="Bicicleta de montaña , con bonito paisaje">
+        </div>
+    </section>
+
+
+
 
     <main>
-        <section>
-            <h2>¿Quiénes somos?</h2>
-            <p>Somos una empresa apasionada por la movilidad sostenible en Medellín. Queremos que explores la ciudad de una forma única, divertida y ecológica. Si quieres visitarnos, ve directo a la sección de <a href="#encuentranos">Encuéntranos</a>.</p>
-        </section>
 
-        <section>
+        <main>
+        <section class="servicios-row">
             <h2>Nuestros servicios</h2>
-            <p>¿Listo para rodar? <a href="paginas/reservas.html" class="btn-cta">¡Reservar ahora!</a></p>
-            
-            <article>
-                <h3>Renta por horas</h3>
-                <p>Alquila una bicicleta por el tiempo exacto que necesites. Nuestra tarifa <strong>incluye casco y candado</strong> para tu seguridad. Ideal para dar un paseo <em>relajante y libre</em> por las ciclovías.</p>
-            </article>
-
-            <article>
-                <h3>Tours guiados</h3>
-                <p>Descubre los lugares más icónicos de la ciudad con un guía experto. El servicio <strong>incluye hidratación y asistencia médica</strong>. Consulta las rutas y precios directamente en la sección de <a href="paginas/tarifas.html#tabla-recorridos">recorridos guiados</a>.</p>
-            </article>
+            <div class="servicios-container-flex">
+                <div class="servicio-tarjeta">
+                    <h3>Renta por horas</h3>
+                    <p>Alquila una bicicleta por el tiempo exacto que necesites. Nuestra tarifa incluye casco y candado para tu seguridad.</p>
+                </div>
+                <div class="servicio-tarjeta">
+                    <h3>Tours guiados</h3>
+                    <p>Descubre los lugares más icónicos de la ciudad con un guía experto. El servicio incluye hidratación y asistencia médica.</p>
+                </div>
+            </div>
         </section>
+
+        <section style="width: 100%;">
+            <h2>Galería de nuestra ruta</h2>
+            <div class="galeria-rutas">
+                <article>
+                    <div class="tarjeta-media">
+                        <img src="img/rio.jpeg" alt="Ruta Río y Parques">
+                    </div>
+                    <h3>Río y Parques</h3>
+                    <p>Recorrido fácil de 12 km para disfrutar los parques emblemáticos de Medellín.</p>
+                </article>
+
+                <article>
+                    <div class="tarjeta-media">
+                        <img src="img/comida.jpg" alt="Ruta Sabores de Barrio">
+                    </div>
+                    <h3>Sabores de Barrio</h3>
+                    <p>Explora la gastronomía local pedaleando 18 km en un nivel medio.</p>
+                </article>
+
+                <article>
+                    <div class="tarjeta-media">
+                        <img src="img/palmas.jpeg" alt="Reto Las Palmas">
+                    </div>
+                    <h3>Reto Las Palmas</h3>
+                    <p>Pon a prueba tus piernas con una subida exigente de 25 km hasta el alto.</p>
+                </article>
+            </div>
+        </section>
+    
 
         <!-- Flota -->
         <section class="flota-seccion">
@@ -52,13 +94,13 @@
         <div class="flota-grid">
             <!-- 1. Urbana Clásica -->
             <article class="tarjeta-bici">
-            <div class="tarjeta-media">
-                <img src="img/urbana-clasica.jpg" alt="Urbana Clásica">
-            </div>
-            <h2>Urbana Clásica</h2>
-            <p class="descripcion">Cómoda y liviana para las ciclorrutas.</p>
-            <p class="precio">$10.000 / hora</p>
-            <a href="paginas/reservas.html" class="btn-cta">Reservar</a>
+                <div class="tarjeta-media">
+                    <img src="img/urbana-clasica.jpg" alt="Urbana Clásica">
+                </div>
+                <h2>Urbana Clásica</h2>
+                <p class="descripcion">Cómoda y liviana para las ciclorrutas.</p>
+                <p class="precio">$10.000 / hora</p>
+                <a href="paginas/reservas.html" class="btn-cta">Reservar</a>
             </article>
 
             <!-- 2. Urbana Plegable -->
@@ -147,13 +189,6 @@
                 <li>Precios económicos y accesibles para todos.</li>
                 <li>Asistencia en ruta ante cualquier imprevisto.</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>Galería de nuestra ruta</h2>
-            <img src="img/portada.png" alt="Portada principal de Rueda Libre" width="300">
-            <img src="img/bicicleta.png" alt="Bicicleta de montaña disponible para alquiler" width="300">
-            <img src="img/ruta.png" alt="Mapa de la ciclorruta recomendada en Medellín" width="300">
         </section>
 
         <section id="encuentranos">

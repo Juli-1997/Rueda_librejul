@@ -177,3 +177,12 @@ El diseño acomoda los 7 modelos de la flota de esta manera:
 - **Resolución a 900 px:** Se reorganiza automáticamente a **2 columnas**. Las tarjetas se distribuyen de forma fluida sin desbordar el contenedor.
 - **Resolución a 500 px:** Se reorganiza automáticamente a **1 columna**. Cada tarjeta ocupa el 100% del ancho móvil disponible para garantizar una lectura cómoda..
 
+--- Casos de uso con flexbo o Grid--
+
+Componente	     Sistema	     ¿Por qué?
+Encabezado	     Flexbox	     Alínea el logo y menú en una sola fila horizontal con space-between.
+Portada	         Grid	         Divide la pantalla en dos columnas exactas (1fr 1fr) y centra el texto verticalmente.
+Galería	         Grid	         Coloca obligatoriamente tres tarjetas simétricas en la misma fila con repeat(3, 1fr).
+Reservas	       Grid	         Estructura la página en dos columnas asimétricas con proporción exacta de 2fr 1fr.
+Fila Formulario	 Flexbox	     Distribuye los dos campos cortos en una sola fila fluida usando flex: 1.
+Pie de página	   Flexbox	     Reparte los bloques de texto horizontalmente de forma libre y adaptativa.
