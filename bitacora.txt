@@ -169,3 +169,11 @@ Resumen de los MiniRetos - SEMANA 1 (RUEDA LIBRE)
 -----comportamiento del encabezado y pie de página(con flex)-----
 -Encabezado: Cuando se estrecha la pantalla(o el espacio que tenía originalmente para ver) el contenido o menú se correo, o se baja y acomoda gracias a flex-wrap.
 -Pie de página: Los tres bloques(Marca, Contacto, Horarios) pasan a estar en fila. La propiedad gap mantiene una separación limpia y uniforme en todo momento..
+
+------Comprobación - Cuadrícula(DevTools)------
+El diseño acomoda los 7 modelos de la flota de esta manera:
+
+- **Resolución a 1280 px:** Se visualizan **3 columnas**. Las tarjetas se distribuyen equitativamente ocupando el espacio disponible (en tres filas: dos de 3 y otra de 1).
+- **Resolución a 900 px:** Se reorganiza automáticamente a **2 columnas**. Las tarjetas se distribuyen de forma fluida sin desbordar el contenedor.
+- **Resolución a 500 px:** Se reorganiza automáticamente a **1 columna**. Cada tarjeta ocupa el 100% del ancho móvil disponible para garantizar una lectura cómoda..
+

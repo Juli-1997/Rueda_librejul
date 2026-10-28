@@ -58,7 +58,7 @@ footer {  /*Es para evitar que tape el pie de página */
 }
 
 .footer-bloque{
-  flex: 1px;
+  flex: 1;
   min-width: 200px;
 }
 
@@ -179,6 +179,61 @@ article img {
   outline: none;
   box-shadow: 0 0 0 3px var(--color-naranja-pedal);
 }
+
+
+.flota-seccion {
+  width: 100%;
+  margin-bottom: var(--espacio-lg);
+}
+
+.flota-seccion h2 {
+  text-align: center;
+  margin-bottom: var(--espacio-lg);
+}
+
+.flota-grid {
+  display: grid;
+  /* Ancho mínimo razonable por tarjeta: 280px */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--espacio-lg); 
+  width: 100%;
+}
+
+.tarjeta-bici {
+  background-color: var(--color-crema);
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 8px;
+  padding: 1.5rem;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-bici h3 {
+  margin-top: var(--espacio-sm);
+  margin-bottom: var(--espacio-sm);
+  font-size: 1.4rem;
+}
+
+.tarjeta-bici .descripcion {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--color-gris-asfalto);
+  margin-bottom: var(--espacio-md);
+}
+
+.tarjeta-bici .precio {
+  font-weight: 700;
+  color: var(--color-verde-ruta);
+  margin-bottom: var(--espacio-md);
+}
+
+.tarjeta-bici .btn-cta {
+  margin-top: auto; 
+  text-align: center;
+  width: 100%;
+}
+
 
           /*5. Tabla y formulario*/
 
