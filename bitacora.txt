@@ -160,7 +160,7 @@ Resumen de los MiniRetos - SEMANA 1 (RUEDA LIBRE)
   - Lo que construí: Implementación avanzada de posicionamiento complejo en los últimos componentes (capas flotantes absolute para la etiqueta "Nuevo" sin romper el flujo físico, y position: fixed para el enlace de WhatsApp). Consolidación estética de estilos y lanzamiento de la v1.0 oficial.
 
 
----MEJORAS FUTURAS---
+----MEJORAS FUTURAS----
 
 1. Reemplazar las imágenes fijas con fondo nativo por formatos vectoriales SVG o WebP transparentes para optimizar la contención visual y la velocidad de carga en GitHub Pages..
 
@@ -168,4 +168,4 @@ Resumen de los MiniRetos - SEMANA 1 (RUEDA LIBRE)
 -----SEMANA 2-----
 -----comportamiento del encabezado y pie de página(con flex)-----
 -Encabezado: Cuando se estrecha la pantalla(o el espacio que tenía originalmente para ver) el contenido o menú se correo, o se baja y acomoda gracias a flex-wrap.
--Pie de página: Los tres bloques(Marca, Contacto, Horarios) pasan a estar en fila. La propiedad gap mantiene una separación limpia y uniforme en todo momento.
+-Pie de página: Los tres bloques(Marca, Contacto, Horarios) pasan a estar en fila. La propiedad gap mantiene una separación limpia y uniforme en todo momento..
