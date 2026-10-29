@@ -26,6 +26,14 @@
   box-sizing: border-box; 
 }
 
+/* Asegura que ninguna imagen se desborde o sea más grande que su contenedor */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 body {
   font-family: var(--fuente-textos);
   font-weight: 400;
@@ -252,12 +260,13 @@ table {
 }
 
 th, td {
-  padding: 0.6rem 1rem;                 
+  padding: 0.5rem 0.5rem; /* Ajustado para que el texto no empuje la tabla en móviles */                
   text-align: left;
-  font-size: 0.9rem; 
+  font-size: 0.75rem; /* Letra más compacta para evitar el desplazamiento lateral */ 
   border-bottom: 1px solid var(--color-gris-suave);
   border-right: 1px solid var(--color-gris-suave);
 }
+
 
 
 th:last-child, td:last-child {
@@ -351,15 +360,11 @@ article img {
   box-shadow: var(--sombra-tarjeta);
 }
 
-
-
-
-
-
 .tarjeta-bici h3 {
   margin-top: var(--espacio-sm);
   margin-bottom: var(--espacio-sm);
   font-size: 1.2rem; 
+}
 
 .tarjeta-bici .descripcion {
   font-size: 0.9rem;
@@ -464,7 +469,17 @@ input, select, textarea {
   background-color: var(--color-blanco);
   color: var(--color-azul-noche);
   font-size: 1rem;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-top-color: var(--color-verde-hover);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+form button:hover, form button:focus {
+  background-color: #434B54; 
+  outline: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(91, 100, 112, 0.4);
+  widows: inset 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: var(--transicion);
 }
 
@@ -477,7 +492,6 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.05); 
 }
 
-/* Ajustes especiales para Radio, Checkbox y Contenedores */
 .radio-group-container {
   background-color: rgba(255, 255, 255, 0.1); /* Contenedor sutil translúcido */
   padding: var(--espacio-md);
@@ -510,7 +524,6 @@ input:focus, select:focus, textarea:focus {
   cursor: pointer;
 }
 
-/* Botones de Acción Estilizados */
 .btn-cta, form button {
   font-family: var(--fuente-titulos);
   display: inline-block;
@@ -529,7 +542,6 @@ input:focus, select:focus, textarea:focus {
   transition: var(--transicion);
 }
 
-/* Botón de envío del Formulario (Gris Asfalto con hover adaptativo) */
 form button {
   width: 100%;
   background-color: var(--color-gris-asfalto); /* Color Gris Asfalto asignado */
@@ -554,3 +566,23 @@ form button:hover, form button:focus {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(91, 100, 112, 0.4);
 }
+
+/*Para las pantallas grandes*/
+/* Se activa en tabletas en adelante */
+@media (min-width: 768px) {
+  th, td {
+    padding: 0.6rem 1rem; /* Devuelve el espaciado cómodo en pantallas medianas */
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  table {
+    max-width: 650px;
+    margin: 2.5rem auto; 
+  }
+  th, td {
+    font-size: 0.9rem; 
+  }
+}
+

@@ -186,3 +186,11 @@ Galería	         Grid	         Coloca obligatoriamente tres tarjetas simétrica
 Reservas	       Grid	         Estructura la página en dos columnas asimétricas con proporción exacta de 2fr 1fr.
 Fila Formulario	 Flexbox	     Distribuye los dos campos cortos en una sola fila fluida usando flex: 1.
 Pie de página	   Flexbox	     Reparte los bloques de texto horizontalmente de forma libre y adaptativa.
+
+-----Problemas en el "Modo Dispositivo"-----
+1. Tablas desbordadas en móvil (360px):
+-Solución: Bajé la letra de las celdas a 0.75rem y el relleno a 0.5rem para que cupieran en el celular sin moverse de lado.
+2. Tablas gigantes en escritorio (1200px):
+-Solución: Puse una media query al final para limitar el ancho máximo de la tabla a 650px y centrarla en pantallas grandes.
+3. Imágenes que rompían el margen:
+-Solución: Apliqué img { max-width: 100%; } al inicio del archivo para obligar a las fotos a encogerse al tamaño de la pantalla.
