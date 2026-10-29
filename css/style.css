@@ -124,7 +124,7 @@ main {
   gap: var(--espacio-lg);
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .portada-texto p {
@@ -585,4 +585,45 @@ form button:hover, form button:focus {
     font-size: 0.9rem; 
   }
 }
+
+/* ==========================================================================
+   AJUSTES EXCLUSIVOS PARA CELULARES (No afecta el diseño de la computadora)
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* La portada pasa de 2 columnas a 1 sola */
+  .portada {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Las 3 columnas de la galería de rutas se vuelven 1 sola */
+  .galeria-rutas {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Las 3 columnas de la flota de bicicletas se vuelven 1 sola */
+  .flota-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* La sección de reservas pasa a una sola columna */
+  .reservas-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Los campos dobles del formulario se apilan uno abajo del otro */
+  .form-linea-doble {
+    flex-direction: column !important;
+  }
+
+  /* Evita que los botones del menú superior se aplasten horizontalmente */
+  #menu {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: var(--espacio-sm) !important;
+  }
+}
+
 
