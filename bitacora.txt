@@ -210,3 +210,14 @@ Tiempo invertido: 35 minutos en total y un en total 133 lineas de código.
 ---Control que se perdió ---
 -Identidad visual y estética de la marca:- Al remover los estilos propios, se perdió el control sobre el diseño personalizado previo (fuentes como Montserrat, paleta de colores institucionales como crema y azul noche, radios de curvatura específicos y sombras suaves). El catálogo adoptó la estética por defecto ("de fábrica") del framework.
 -Saturación del HTML:- El archivo HTML ahora requiere una alta concentración de clases utilitarias para lograr comportamientos de diseño estructural básicos, restándole legibilidad al marcado limpio que se tenía antes.
+
+
+---Reto 7, migrar a Bootstrap---
+- Conflicto 1: Al inspeccionar los encabezados (h1, h2, h3) en DevTools, observé que los márgenes definidos en el CSS personalizado podían interferir con los márgenes predeterminados de Bootstrap.
+   Solución: eliminar los márgenes personalizados innecesarios y utilizar las clases de espaciado de Bootstrap, como mb-3 y mt-4, para controlar la separación de los elementos.
+
+- Conflicto 2: Los enlaces tenían colores diferentes a los establecidos por Bootstrap debido a las reglas personalizadas aplicadas a las etiquetas a. En DevTools pude observar las declaraciones CSS que competían por establecer el color.
+   Solución: revisar las reglas personalizadas de los enlaces y utilizar las clases de Bootstrap, como text-success y text-decoration-none, para controlar su apariencia.
+
+- Conflicto 3: Los tamaños de letra definidos en el CSS personalizado para los encabezados podían sobrescribir los tamaños establecidos por las clases de Bootstrap, generando diferencias en la apariencia del texto.
+   Solución: Eliminé las reglas de tamaño que generaban conflictos y se utilizaron las clases de Bootstrap, como fs-1, fs-2 y fs-4, para establecer tamaños de texto adecuados.
