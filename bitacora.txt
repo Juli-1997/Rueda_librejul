@@ -194,3 +194,19 @@ Pie de página	   Flexbox	     Reparte los bloques de texto horizontalmente de f
 -Solución: Puse una media query al final para limitar el ancho máximo de la tabla a 650px y centrarla en pantallas grandes.
 3. Imágenes que rompían el margen:
 -Solución: Apliqué img { max-width: 100%; } al inicio del archivo para obligar a las fotos a encogerse al tamaño de la pantalla.
+
+-----Tiempo de uso con bootstrap-----
+Tiempo invertido: 35 minutos en total y un en total 133 lineas de código.
+
+----Comparación de Líneas de CSS ---
+-Versión propia original con styles.css: 23 líneas de CSS dedicadas exclusivamente a maquetar la sección (selectores `.flota-grid`, quiebres con `@media (max-width: 767px)` para colapsar a 1 columna y reglas manuales de espaciados).
+-Versión actual con Bootstrap: 0 líneas de CSS de distribución. Todo el comportamiento se delegó por completo al marcado HTML usando el sistema de rejilla nativo con las clases `row g-4` y `col-12 col-sm-6 col-lg-4 col-xl-3`.
+
+----Qué obtuve de Bootstrap sin esfuerzo ---
+-Resolución responsiva fluida:- Un comportamiento perfectamente adaptado a 4 quiebres de pantalla distintos (1 columna en móviles, 2 en pantallas SM, 3 en pantallas LG y 4 en pantallas XL) sin escribir una sola Media Query manual.
+-Manejo matemático de anchos y espacios:- Cálculos automáticos de los anchos porcentuales para cada tarjeta y el control de separación uniforme mediante la clase "g-4", evitando desbordamientos visuales.
+-Componentes estandarizados:- Estilos limpios e inmediatos para tarjetas "card" y botones "btn", ahorrando la maquetación base del componente desde cero.
+
+---Control que se perdió ---
+-Identidad visual y estética de la marca:- Al remover los estilos propios, se perdió el control milimétrico sobre el diseño personalizado previo (fuentes como Montserrat, paleta de colores institucionales como crema y azul noche, radios de curvatura específicos y sombras suaves). El catálogo adoptó la estética por defecto ("de fábrica") del framework.
+-Saturación del HTML:- El archivo HTML ahora requiere una alta concentración de clases utilitarias para lograr comportamientos de diseño estructural básicos, restándole legibilidad al marcado limpio que se tenía antes.

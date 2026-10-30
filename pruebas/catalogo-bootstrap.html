@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prueba de Catálogo - Bootstrap 5.3</title>
+    <!-- CSS de Bootstrap 5.3 por CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    
+      .card {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        font-family: 'Montserrat', sans-serif;
+      }
+          
+      .card-img-top {
+        height: 220px;
+        object-fit: cover;
+      }
+
+    </style>
+  </head>
+
+
+  <body class="bg-light">
+
+    <div class="container my-5">
+     <h1 class="text-center mb-5 display-4 fw-bold">Nuestra Flota</h1>
+
+      
+      <div class="row g-4">
+        <!-- bici 1 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card h-100 shadow-sm">
+            <img src="/img/urbana-clasica.jpg" class="card-img-top" alt="Urbana Clásica">
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5 card-title fw-bold text-dark mb-2">Urbana Clásica</h2>
+              <p class="card-text text-muted">Cómoda y liviana para las ciclorrutas.</p>
+              <p class="text-success fw-bold fs-5 mb-3">$10.000 / hora</p>
+              <a href="../paginas/reservas.html" class="btn btn-dark w-100 py-2 rounded-3 fw-semibold">Reservar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bici 2 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card h-100 shadow-sm">
+            <img src="/img/urbana-plegable.jpg" class="card-img-top" alt="Urbana Plegable">
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5 card-title fw-bold text-dark">Urbana Plegable</h2>
+              <p class="card-text text-muted">Se dobla en segundos; ideal para combinar con el metro.</p>
+              <p class="text-success fw-bold fs-5 mb-3">$12.000 / hora</p>
+              <a href="../paginas/reservas.html" class="btn btn-dark w-100 py-2 rounded-3 fw-semibold">Reservar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bici 3 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card h-100 shadow-sm">
+            <img src="/img/montana-trail.jpg" class="card-img-top" alt="Montaña Trail">
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5 card-title fw-bold text-dark">Montaña Trail</h2>
+              <p class="card-text text-muted">Suspensión delantera y 21 cambios para las subidas.</p>
+              <p class="text-success fw-bold fs-5 mb-3">$15.000 / hora</p>
+              <a href="../paginas/reservas.html" class="btn btn-dark w-100 py-2 rounded-3 fw-semibold">Reservar</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- bici 4 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card h-100 shadow-sm">
+            <img src="/img/gravel-aventura.jpg" class="card-img-top" alt="Gravel aventura">
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5 card-title fw-bold text-dark">Gravel Aventura</h2>
+              <p class="card-text text-muted">Para rutas mixtas de asfalto y destapado.</p>
+              <p class="text-success fw-bold fs-5 mb-3">$18.000 / hora</p>
+              <a href="../paginas/reservas.html" class="btn btn-dark w-100 py-2 rounded-3 fw-semibold">Reservar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bici 5 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card h-100 shadow-sm">
+            <img src="/img/bici-electrica.jpg" class="card-img-top" alt="Bici Eléctrica">
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5 card-title fw-bold text-dark">Urbana Eléctrica</h2>
+              <p class="card-text text-muted">Asistencia eléctrica con 45 km de autonomía.</p>
+              <p class="text-success fw-bold fs-5 mb-3">$25.000 / hora</p>
+              <a href="../paginas/reservas.html" class="btn btn-dark w-100 py-2 rounded-3 fw-semibold">Reservar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bici 6 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card h-100 shadow-sm">
+            <img src="/img/infantil.jpg" class="card-img-top" alt="Infantil">
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5 card-title fw-bold text-dark">Infantil</h2>
+              <p class="card-text text-muted">Para niños de 6 a 10 años.</p>
+              <p class="text-success fw-bold fs-5 mb-3">$8.000 / hora</p>
+              <a href="../paginas/reservas.html" class="btn btn-dark w-100 py-2 rounded-3 fw-semibold">Reservar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bici 7 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card h-100 shadow-sm">
+            <img src="/img/tandem.jpg" class="card-img-top" alt="Tandém">
+            <div class="card-body d-flex flex-column">
+              <h2 class="h5 card-title fw-bold text-dark">Tandém</h2>
+              <p class="card-text text-muted">Para dos personas; perfecta para pasear en pareja.</p>
+              <p class="text-success fw-bold fs-5 mb-3">$20.000 / hora</p>
+              <a href="../paginas/reservas.html" class="btn btn-dark w-100 py-2 rounded-3 fw-semibold">Reservar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -260,9 +260,9 @@ table {
 }
 
 th, td {
-  padding: 0.5rem 0.5rem; /* Ajustado para que el texto no empuje la tabla en móviles */                
+  padding: 0.5rem 0.5rem;                 
   text-align: left;
-  font-size: 0.75rem; /* Letra más compacta para evitar el desplazamiento lateral */ 
+  font-size: 0.75rem; 
   border-bottom: 1px solid var(--color-gris-suave);
   border-right: 1px solid var(--color-gris-suave);
 }
@@ -273,7 +273,6 @@ th:last-child, td:last-child {
   border-right: none;
 }
 
-/* Elimina el borde inferior de la última fila */
 tr:last-child td {
   border-bottom: none;
 }
@@ -286,18 +285,14 @@ th {
   letter-spacing: 0.5px;
 }
 
-/* Efecto cebra */
 tbody tr:nth-child(even) {
   background-color: rgba(20, 33, 61, 0.02);
 }
 
-/* Resalta la fila al pasar el cursor */
 tbody tr:hover {
   background-color: rgba(30, 122, 79, 0.04);
   transition: background-color 0.2s ease;
 }
-
-
 
 
 /* Tarjetas de Galería */
@@ -336,10 +331,9 @@ article img {
   margin-bottom: var(--espacio-lg);
 }
 
-/* Forzamos una cuadrícula estricta de 3 columnas en una fila */
 .flota-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas exactas en la fila */
+  grid-template-columns: repeat(3, 1fr); 
   gap: var(--espacio-lg); 
   width: 100%;
 }
@@ -567,11 +561,10 @@ form button:hover, form button:focus {
   box-shadow: 0 8px 20px rgba(91, 100, 112, 0.4);
 }
 
-/*Para las pantallas grandes*/
-/* Se activa en tabletas en adelante */
+
 @media (min-width: 768px) {
   th, td {
-    padding: 0.6rem 1rem; /* Devuelve el espaciado cómodo en pantallas medianas */
+    padding: 0.6rem 1rem; 
     font-size: 0.85rem;
   }
 }
@@ -586,39 +579,31 @@ form button:hover, form button:focus {
   }
 }
 
-/* ==========================================================================
-   AJUSTES EXCLUSIVOS PARA CELULARES (No afecta el diseño de la computadora)
-   ========================================================================== */
+
 @media (max-width: 767px) {
-  /* La portada pasa de 2 columnas a 1 sola */
   .portada {
     grid-template-columns: 1fr !important;
     min-height: auto !important;
     margin-bottom: 2rem !important;
   }
 
-  /* Las 3 columnas de la galería de rutas se vuelven 1 sola */
   .galeria-rutas {
     grid-template-columns: 1fr !important;
   }
 
-  /* Las 3 columnas de la flota de bicicletas se vuelven 1 sola */
   .flota-grid {
     grid-template-columns: 1fr !important;
   }
 
-  /* La sección de reservas pasa a una sola columna */
   .reservas-container {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
 
-  /* Los campos dobles del formulario se apilan uno abajo del otro */
   .form-linea-doble {
     flex-direction: column !important;
   }
 
-  /* Evita que los botones del menú superior se aplasten horizontalmente */
   #menu {
     flex-wrap: wrap !important;
     justify-content: center !important;
