@@ -105,7 +105,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-/* Bloque lateral informativo */
 .contacto-lateral {
   background-color: var(--color-blanco);
   padding: var(--espacio-lg);
@@ -121,53 +120,64 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-table {
+table.tabla-diseno-nuevo {
   width: 100%;
-  max-width: 650px;
   border-collapse: separate;
   border-spacing: 0;
-  margin: 2.5rem auto;
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-gris-suave);
+  margin: 1.5rem auto;
+  border: 1px solid var(--color-blanco); 
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--sombra-suave);
 }
 
-th, td {
-  padding: 0.5rem;
-  text-align: left;
+table.tabla-diseno-nuevo th, 
+table.tabla-diseno-nuevo td {
+  padding: 0.85rem 1rem;
   font-size: 0.75rem;
-  border-bottom: 1px solid var(--color-azul-noche);
+  border-bottom: 1px solid var(--color-gris-suave); 
   border-right: 1px solid var(--color-gris-suave);
 }
 
-th:last-child,
-td:last-child {
+table.tabla-diseno-nuevo th:last-child,
+table.tabla-diseno-nuevo td:last-child {
   border-right: none;
 }
-
-tr:last-child td {
+table.tabla-diseno-nuevo tbody tr:last-child th,
+table.tabla-diseno-nuevo tbody tr:last-child td {
   border-bottom: none;
 }
 
-th {
-  background-color: var(--color-azul-noche);
-  color: var(--color-blanco);
+
+table.tabla-diseno-nuevo thead th {
+  background-color: var(--color-azul-noche); 
+  color: var(--color-blanco); 
   font-family: var(--fuente-titulos);
   font-weight: 600;
   letter-spacing: 0.5px;
+  text-align: left;
+  border-right: 1px solid rgba(255, 255, 255, 0.2); /* Línea blanca sutil vertical */
 }
 
-tbody tr:nth-child(even) {
-  background-color: rgba(20, 33, 61, 0.02);
+
+
+table.tabla-diseno-nuevo tbody td {
+  background-color: var(--color-blanco);
+  color: var(--color-azul-noche);
 }
 
-tbody tr:hover {
-  background-color: rgba(30, 122, 79, 0.04);
-  transition: background-color 0.2s ease;
+table.tabla-diseno-nuevo tbody tr:nth-child(even) td {
+  background-color: var(--color-gris-suave);
 }
+
+table.tabla-diseno-nuevo tbody tr th[scope="row"] {
+  background-color: var(--color-azul-noche);
+  color: var(--color-blanco);
+  font-weight: 600;
+  text-align: left;
+  border-right: 1px solid rgba(255, 255, 255, 0.2); /* Línea blanca sutil vertical */
+}
+
 
 
 
@@ -368,7 +378,6 @@ textarea:focus {
               inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Botones de formularios */
 form button {
   display: inline-block;
   width: 100%;
@@ -467,3 +476,30 @@ h2 {
     display: inline-block;
 }
 
+/* Títulos de las tablas */
+table.tabla-diseno-nuevo {
+    caption-side: top !important;
+}
+
+table.tabla-diseno-nuevo caption {
+    caption-side: top !important;
+    text-align: center;
+    color: var(--color-azul-noche);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem;
+}
+table.tabla-diseno-nuevo {
+    caption-side: top !important;
+}
+
+table.tabla-diseno-nuevo caption {
+    caption-side: top !important;
+    text-align: center;
+    color: var(--color-azul-noche);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem;
+}
