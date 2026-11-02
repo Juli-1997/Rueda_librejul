@@ -1,5 +1,7 @@
 
-/*General */
+/* =========================================
+   1. VARIABLES GENERALES
+========================================= */
 
 :root {
   --color-crema: #FAF6EF;
@@ -26,6 +28,9 @@
 }
 
 
+/* =========================================
+   2. ESTILOS GENERALES
+========================================= */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -46,14 +51,22 @@ body {
   margin: 0;
 }
 
-/* Tipografía propia */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--fuente-titulos);
   font-weight: 700;
   color: var(--color-azul-noche);
 }
 
+h2 {
+  border-bottom: 3px solid var(--color-naranja-pedal);
+  padding-bottom: 8px;
+  display: inline-block;
+}
 
+
+/* =========================================
+   3. MENÚ DE NAVEGACIÓN
+========================================= */
 
 #menu {
   list-style: none;
@@ -84,102 +97,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-/* Estructura de reservas */
-.reservas-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-/* Campos de formulario en dos columnas */
-.form-linea-doble {
-  display: flex;
-  gap: var(--espacio-md);
-  width: 100%;
-}
-
-.form-linea-doble .form-group {
-  flex: 1;
-  margin-bottom: 0;
-}
-
-.contacto-lateral {
-  background-color: var(--color-blanco);
-  padding: var(--espacio-lg);
-  border-radius: var(--borde-redondeado);
-  border: 1px solid var(--color-gris-suave);
-  box-shadow: var(--sombra-suave);
-}
-
-.contacto-lateral h3 {
-  font-size: 1.3rem;
-  margin-bottom: var(--espacio-md);
-  color: var(--color-verde-ruta);
-}
-
-
-table.tabla-diseno-nuevo {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 1.5rem auto;
-  border: 1px solid var(--color-blanco); 
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--sombra-suave);
-}
-
-table.tabla-diseno-nuevo th, 
-table.tabla-diseno-nuevo td {
-  padding: 0.85rem 1rem;
-  font-size: 0.75rem;
-  border-bottom: 1px solid var(--color-gris-suave); 
-  border-right: 1px solid var(--color-gris-suave);
-}
-
-table.tabla-diseno-nuevo th:last-child,
-table.tabla-diseno-nuevo td:last-child {
-  border-right: none;
-}
-table.tabla-diseno-nuevo tbody tr:last-child th,
-table.tabla-diseno-nuevo tbody tr:last-child td {
-  border-bottom: none;
-}
-
-
-table.tabla-diseno-nuevo thead th {
-  background-color: var(--color-azul-noche); 
-  color: var(--color-blanco); 
-  font-family: var(--fuente-titulos);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-align: left;
-  border-right: 1px solid rgba(255, 255, 255, 0.2); /* Línea blanca sutil vertical */
-}
-
-
-
-table.tabla-diseno-nuevo tbody td {
-  background-color: var(--color-blanco);
-  color: var(--color-azul-noche);
-}
-
-table.tabla-diseno-nuevo tbody tr:nth-child(even) td {
-  background-color: var(--color-gris-suave);
-}
-
-table.tabla-diseno-nuevo tbody tr th[scope="row"] {
-  background-color: var(--color-azul-noche);
-  color: var(--color-blanco);
-  font-weight: 600;
-  text-align: left;
-  border-right: 1px solid rgba(255, 255, 255, 0.2); /* Línea blanca sutil vertical */
-}
-
-
-
+/* =========================================
+   4. TARJETAS DE CONTENIDO
+========================================= */
 
 article {
   background-color: var(--color-blanco);
@@ -196,6 +116,9 @@ article:hover {
 }
 
 
+/* =========================================
+   5. IMÁGENES DE RUTAS
+========================================= */
 
 .tarjeta-media {
   position: relative;
@@ -213,6 +136,9 @@ article img {
 }
 
 
+/* =========================================
+   6. TARJETAS DE BICICLETAS
+========================================= */
 
 .tarjeta-bici {
   background-color: var(--color-blanco);
@@ -251,6 +177,9 @@ article img {
 }
 
 
+/* =========================================
+   7. ETIQUETA DE BICICLETA NUEVA
+========================================= */
 
 .badge-nuevo {
   position: absolute;
@@ -267,6 +196,9 @@ article img {
 }
 
 
+/* =========================================
+   8. BOTONES PERSONALIZADOS
+========================================= */
 
 .btn-cta {
   font-family: var(--fuente-titulos);
@@ -291,215 +223,4 @@ article img {
   background-color: var(--color-verde-hover);
   outline: none;
   transform: translateY(-2px);
-}
-
-
-
-.btn-whatsapp-flotante {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: #FFFFFF;
-  padding: 12px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.btn-whatsapp-flotante:hover,
-.btn-whatsapp-flotante:focus {
-  background-color: #128C7E;
-  transform: scale(1.05);
-  outline: none;
-  box-shadow: 0 0 0 3px var(--color-naranja-pedal);
-}
-
-
-/*Formulario reserva*/
-
-form {
-  background-color: var(--color-azul-noche);
-  padding: 3rem var(--espacio-lg);
-  border-radius: var(--borde-redondeado);
-  border: none;
-  box-shadow: var(--sombra-tarjeta);
-}
-
-form fieldset legend {
-  color: var(--color-blanco);
-  font-family: var(--fuente-titulos);
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: var(--espacio-md);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-  margin-bottom: var(--espacio-lg);
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: var(--espacio-sm);
-  color: var(--color-blanco);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-/* Campos del formulario */
-input,
-select,
-textarea {
-  font-family: var(--fuente-textos);
-  display: block;
-  width: 100%;
-  padding: 14px var(--espacio-md);
-  border: none;
-  border-radius: 30px;
-  background-color: var(--color-blanco);
-  color: var(--color-azul-noche);
-  font-size: 1rem;
-  outline: none;
-}
-
-textarea {
-  border-radius: 12px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4),
-              inset 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-form button {
-  display: inline-block;
-  width: 100%;
-  background-color: var(--color-gris-asfalto);
-  color: var(--color-blanco);
-  border: none;
-  border-radius: 30px;
-  padding: 12px 28px;
-  font-family: var(--fuente-titulos);
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: var(--espacio-md);
-  box-shadow: 0 5px 15px rgba(91, 100, 112, 0.3);
-  cursor: pointer;
-  transition: var(--transicion);
-}
-
-form button:hover,
-form button:focus {
-  background-color: #434B54;
-  outline: none;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(91, 100, 112, 0.4);
-}
-
-/* Grupos de opciones */
-.radio-group-container {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: var(--espacio-md);
-  border-radius: 12px;
-}
-
-.radio-group-container label {
-  color: var(--color-blanco);
-  font-weight: 500;
-}
-
-.form-group input[type="radio"],
-.form-group input[type="checkbox"] {
-  display: inline-block;
-  width: auto;
-  margin-right: var(--espacio-sm);
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.form-group-checkbox {
-  display: flex;
-  align-items: center;
-  gap: var(--espacio-sm);
-}
-
-.form-group-checkbox label {
-  color: var(--color-blanco);
-  margin-bottom: 0;
-  cursor: pointer;
-}
-
-
-
-@media (min-width: 768px) {
-  th, td {
-    padding: 0.6rem 1rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  table {
-    max-width: 650px;
-    margin: 2.5rem auto;
-  }
-
-  th, td {
-    font-size: 0.9rem;
-  }
-}
-
-/* Adaptación de las páginas de reservas */
-@media (max-width: 767px) {
-  .reservas-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .form-linea-doble {
-    flex-direction: column;
-  }
-}
-
-h2 {
-    border-bottom: 3px solid #F39A2B;
-    padding-bottom: 8px;
-    display: inline-block;
-}
-
-/* Títulos de las tablas */
-table.tabla-diseno-nuevo {
-    caption-side: top !important;
-}
-
-table.tabla-diseno-nuevo caption {
-    caption-side: top !important;
-    text-align: center;
-    color: var(--color-azul-noche);
-    font-family: var(--fuente-titulos);
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 0.75rem;
-}
-table.tabla-diseno-nuevo {
-    caption-side: top !important;
-}
-
-table.tabla-diseno-nuevo caption {
-    caption-side: top !important;
-    text-align: center;
-    color: var(--color-azul-noche);
-    font-family: var(--fuente-titulos);
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 0.75rem;
 }

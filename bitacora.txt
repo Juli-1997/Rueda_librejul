@@ -221,3 +221,18 @@ Tiempo invertido: 35 minutos en total y un en total 133 lineas de código.
 
 - Conflicto 3: Los tamaños de letra definidos en el CSS personalizado para los encabezados podían sobrescribir los tamaños establecidos por las clases de Bootstrap, generando diferencias en la apariencia del texto.
    Solución: Eliminé las reglas de tamaño que generaban conflictos y se utilizaron las clases de Bootstrap, como fs-1, fs-2 y fs-4, para establecer tamaños de texto adecuados.
+
+---Comparación de style.css de v1.5 frente a la actual v2.0---
+-Lineas de v1.5(style.css): 629 lineas.
+-Tiempo invertido es v1.5: me llevó como 3 día hacerlo.
+-Ventaja: permitió personalizar los elementos de la página y tener mayor control de ésta.
+-Desventajas: para poder hacer que la página se viera bien, tenía que hacer muchas líneas de código en el css.
+
+----La diferencia es de 403 líneas entre las dos versiones. ----
+
+-Lineas de v2.0(style.css): 226 lineas.
+-Tiempo invertido de v2.0(la actual): 1 día y medio.
+-Ventajas: A la hora de depurar el css, se redujo demasiado la cantidad de líneas, ya que eliminé estilos para convertirlos en clases en la misma pagina.
+-Desventajas: Algunas personalizaciones requirieron combinar las clases de Bootstrap con CSS propio.
+
+En conclusión, al migrar de css a bootstrap se redujeron mucho la cantidad de código, además la versión actual tiene una estructura de estilos más sencilla, organizada y fácil de mantener, sin perder el visual del proyecto.
