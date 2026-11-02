@@ -225,3 +225,58 @@ article img {
   transform: translateY(-2px);
 }
 
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#carruselPromociones .carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(65%);
+}
+
+#carruselPromociones .carousel-caption {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    left: 10%;
+    right: 10%;
+    transform: translateY(-50%);
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    text-shadow: none;
+}
+
+#carruselPromociones .carousel-caption h2,
+#carruselPromociones .carousel-caption p {
+    color: #000000;
+}
+
+@media (max-width: 576px) {
+    #carruselPromociones .carousel-item img {
+        height: 260px;
+    }
+
+    #carruselPromociones .carousel-caption {
+        left: 5%;
+        right: 5%;
+        padding: 8px;
+    }
+
+    #carruselPromociones .carousel-caption h2 {
+        font-size: 1.1rem;
+    }
+
+    #carruselPromociones .carousel-caption p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+}
