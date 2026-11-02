@@ -236,3 +236,6 @@ Tiempo invertido: 35 minutos en total y un en total 133 lineas de código.
 -Desventajas: Algunas personalizaciones requirieron combinar las clases de Bootstrap con CSS propio.
 
 En conclusión, al migrar de css a bootstrap se redujeron mucho la cantidad de código, además la versión actual tiene una estructura de estilos más sencilla, organizada y fácil de mantener, sin perder el visual del proyecto.
+
+
+Resumen de la semana: En la semana basicamente se pasó de tener todo en Css y se migró directamente a bootstrap, donde nos ahorrabamos muchas líneas en el archivo style.css, además de agregar promociones para atraer a más clientes. Y por último ver que todo se viera más personalizado y profesional.

@@ -1,228 +1,200 @@
 
 /* =========================================
-   1. VARIABLES GENERALES
+   1. IDENTIDAD VISUAL - RUEDA LIBRE 2.0
 ========================================= */
 
 :root {
-  --color-crema: #FAF6EF;
-  --color-blanco: #FFFFFF;
-  --color-azul-noche: #14213D;
-  --color-gris-asfalto: #5B6470;
-  --color-gris-suave: #EAECEF;
-  --color-verde-ruta: #1E7A4F;
-  --color-verde-hover: #165B3A;
-  --color-naranja-pedal: #F39A2B;
-  --color-naranja-boton: #FFA834;
+    /* Colores de marca */
+    --color-crema: #FAF6EF;
+    --color-blanco: #FFFFFF;
+    --color-azul-noche: #14213D;
+    --color-gris-asfalto: #5B6470;
+    --color-gris-suave: #EAECEF;
+    --color-verde-ruta: #1E7A4F;
+    --color-verde-hover: #165B3A;
+    --color-verde-active: #10472E;
+    --color-naranja-pedal: #F39A2B;
 
-  --fuente-titulos: 'Montserrat', sans-serif;
-  --fuente-textos: 'Open Sans', sans-serif;
+    /* Variables globales de Bootstrap */
+    --bs-primary: #1E7A4F;
+    --bs-primary-rgb: 30, 122, 79;
 
-  --espacio-sm: 0.5rem;
-  --espacio-md: 1rem;
-  --espacio-lg: 2rem;
+    --bs-success: #1E7A4F;
+    --bs-success-rgb: 30, 122, 79;
 
-  --sombra-suave: 0 4px 12px rgba(20, 33, 61, 0.06);
-  --sombra-tarjeta: 0 10px 25px rgba(20, 33, 61, 0.12);
-  --borde-redondeado: 16px;
-  --transicion: all 0.3s ease;
+    --bs-body-font-family: 'Open Sans', sans-serif;
+    --bs-body-color: #14213D;
+    --bs-body-bg: #FAF6EF;
+
+    --bs-link-color: #165B3A;
+    --bs-link-hover-color: #10472E;
+
+    --bs-border-radius: 1rem;
+    --bs-border-radius-lg: 1.25rem;
+    --bs-border-radius-xl: 1.5rem;
+
+    /* Variables propias */
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --sombra-suave: 0 4px 12px rgba(20, 33, 61, 0.06);
+    --sombra-tarjeta: 0 10px 25px rgba(20, 33, 61, 0.12);
+    --transicion: all 0.3s ease;
 }
 
-
-/* =========================================
-   2. ESTILOS GENERALES
-========================================= */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
+/*Apariencia general*/
 body {
-  font-family: var(--fuente-textos);
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--color-azul-noche);
-  background-color: var(--color-crema);
-  margin: 0;
+    font-family: var(--bs-body-font-family);
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--fuente-titulos);
-  font-weight: 700;
-  color: var(--color-azul-noche);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    color: var(--color-azul-noche);
 }
 
-h2 {
-  border-bottom: 3px solid var(--color-naranja-pedal);
-  padding-bottom: 8px;
-  display: inline-block;
-}
-
-
-/* =========================================
-   3. MENÚ DE NAVEGACIÓN
-========================================= */
-
-#menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#menu a {
-  color: var(--color-gris-asfalto);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 16px;
-  display: inline-block;
-  border-radius: 20px;
-  transition: var(--transicion);
-}
-
-#menu a.activo {
-  color: var(--color-blanco);
-  background-color: var(--color-verde-ruta);
-}
-
-#menu a:hover:not(.activo),
-#menu a:focus {
-  color: var(--color-azul-noche);
-  background-color: rgba(20, 33, 61, 0.05);
-  outline: none;
+a {
+    transition: var(--transicion);
 }
 
 
-/* =========================================
-   4. TARJETAS DE CONTENIDO
-========================================= */
+/* Portada principal */
 
-article {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-gris-suave);
-  border-radius: var(--borde-redondeado);
-  padding: var(--espacio-md);
-  box-shadow: var(--sombra-suave);
-  transition: var(--transicion);
+.portada {
+    background-color: var(--color-blanco);
+    border-radius: var(--bs-border-radius-xl);
+    padding: 1.5rem;
+    box-shadow: var(--sombra-suave);
 }
 
-article:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--sombra-tarjeta);
+.portada img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: var(--bs-border-radius-lg);
 }
 
+/* Títulos de sección */
 
-/* =========================================
-   5. IMÁGENES DE RUTAS
-========================================= */
-
-.tarjeta-media {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  margin-bottom: var(--espacio-md);
+.titulo-seccion {
+    font-family: var(--fuente-titulos);
+    color: var(--color-azul-noche);
+    border-bottom: 3px solid var(--color-naranja-pedal);
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
-article img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
+/* Pie de llamada a la acción */
+
+.pie-cta {
+    background-color: var(--color-azul-noche);
+    color: var(--color-blanco);
 }
 
-
-/* =========================================
-   6. TARJETAS DE BICICLETAS
-========================================= */
-
-.tarjeta-bici {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-gris-suave);
-  border-radius: var(--borde-redondeado);
-  padding: 1.2rem;
-  box-shadow: var(--sombra-suave);
-  display: flex;
-  flex-direction: column;
-  transition: var(--transicion);
+.pie-cta h2 {
+    color: var(--color-blanco);
 }
 
-.tarjeta-bici:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--sombra-tarjeta);
+.pie-cta p {
+    color: #FFFFFF;
 }
 
-.tarjeta-bici h3 {
-  margin-top: var(--espacio-sm);
-  margin-bottom: var(--espacio-sm);
-  font-size: 1.2rem;
+.tarjeta-marca {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-suave);
+    border-radius: var(--bs-border-radius);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
 }
 
-.tarjeta-bici .descripcion {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: var(--color-gris-asfalto);
-  margin-bottom: var(--espacio-md);
-}
-
-.tarjeta-bici .precio {
-  font-weight: 700;
-  color: var(--color-verde-ruta);
-  margin-bottom: var(--espacio-md);
-  font-size: 1.1rem;
+.tarjeta-marca:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-tarjeta);
 }
 
 
-/* =========================================
-   7. ETIQUETA DE BICICLETA NUEVA
-========================================= */
+.btn-verde-ruta {
+    --bs-btn-color: #FFFFFF;
+    --bs-btn-bg: #1E7A4F;
+    --bs-btn-border-color: #1E7A4F;
 
-.badge-nuevo {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: var(--color-naranja-pedal);
-  color: var(--color-azul-noche);
-  padding: 5px 12px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  z-index: 99;
+    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-bg: #165B3A;
+    --bs-btn-hover-border-color: #165B3A;
+
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: #10472E;
+    --bs-btn-active-border-color: #10472E;
+
+    --bs-btn-disabled-color: #FFFFFF;
+    --bs-btn-disabled-bg: #5B6470;
+    --bs-btn-disabled-border-color: #5B6470;
+
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    transition: var(--transicion);
 }
 
+.btn-naranja-pedal {
+    --bs-btn-color: #14213D;
+    --bs-btn-bg: #F39A2B;
+    --bs-btn-border-color: #F39A2B;
 
-/* =========================================
-   8. BOTONES PERSONALIZADOS
-========================================= */
+    --bs-btn-hover-color: #14213D;
+    --bs-btn-hover-bg: #E58A1B;
+    --bs-btn-hover-border-color: #E58A1B;
 
-.btn-cta {
-  font-family: var(--fuente-titulos);
-  display: inline-block;
-  width: auto;
-  text-align: center;
-  background-color: var(--color-verde-ruta);
-  color: var(--color-blanco) !important;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(30, 122, 79, 0.2);
-  transition: var(--transicion);
+    --bs-btn-active-color: #14213D;
+    --bs-btn-active-bg: #D87912;
+    --bs-btn-active-border-color: #D87912;
+
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    transition: var(--transicion);
 }
 
-.btn-cta:hover,
-.btn-cta:focus {
-  background-color: var(--color-verde-hover);
-  outline: none;
-  transform: translateY(-2px);
+.navbar {
+    border-radius: var(--bs-border-radius-lg);
+}
+
+.navbar-brand {
+    font-family: var(--fuente-titulos);
+    color: var(--color-azul-noche);
+    font-weight: 700;
+}
+
+.navbar .nav-link {
+    color: var(--color-gris-asfalto);
+    transition: var(--transicion);
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-verde-ruta);
+    background-color: rgba(30, 122, 79, 0.08);
+}
+
+.navbar .nav-link-actual {
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+}
+
+.navbar .nav-link-actual:hover {
+    background-color: var(--color-verde-hover);
+    color: #FFFFFF;
+}
+
+.card {
+    border: 1px solid var(--color-gris-suave);
+    border-radius: var(--bs-border-radius);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-tarjeta);
 }
 
 .card-img-top {
@@ -232,35 +204,252 @@ article img {
     object-position: center;
 }
 
+.icono-beneficio {
+    color: var(--color-verde-ruta);
+    font-size: 1.4rem;
+}
+
+
+#carruselPromociones {
+    border-radius: var(--bs-border-radius-lg);
+    overflow: hidden;
+}
+
 #carruselPromociones .carousel-item img {
     width: 100%;
     height: 400px;
     object-fit: cover;
     object-position: center;
-    filter: brightness(65%);
+    filter: brightness(75%);
 }
 
+/* Texto ubicado en la parte inferior */
 #carruselPromociones .carousel-caption {
     position: absolute;
-    top: 50%;
-    bottom: auto;
-    left: 10%;
-    right: 10%;
-    transform: translateY(-50%);
-    color: #000000;
-    background-color: rgba(255, 255, 255, 0.85);
+
+    top: auto;
+    bottom: 3.5rem;
+
+    left: 5%;
+    right: 5%;
+
+    transform: none;
+
+    background-color: rgba(20, 33, 61, 0.88);
+
     border-radius: 12px;
-    padding: 15px;
+
+    padding: 1rem 1.25rem;
+
+    color: #FFFFFF;
     text-align: center;
-    text-shadow: none;
+
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+
+    z-index: 2;
+}
+#carruselPromociones .carousel-caption h2 {
+    font-family: var(--fuente-titulos);
+    color: #FFFFFF;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    margin-bottom: 0.5rem;
 }
 
-#carruselPromociones .carousel-caption h2,
 #carruselPromociones .carousel-caption p {
-    color: #000000;
+    color: #FFFFFF;
+
+    font-size: 1rem;
+    line-height: 1.5;
+
+    margin-bottom: 0;
+}
+
+#carruselPromociones .carousel-indicators {
+    z-index: 3;
+    margin-bottom: 0.75rem;
+}
+
+/* Flechas de navegación */
+#carruselPromociones .carousel-control-prev,
+#carruselPromociones .carousel-control-next {
+    z-index: 4;
+}
+
+@media (max-width: 768px) {
+
+    #carruselPromociones .carousel-item img {
+        height: 320px;
+    }
+
+    #carruselPromociones .carousel-caption {
+        bottom: 3rem;
+        left: 5%;
+        right: 5%;
+
+        padding: 0.8rem;
+    }
+
+    #carruselPromociones .carousel-caption h2 {
+        font-size: 1.25rem;
+    }
+
+    #carruselPromociones .carousel-caption p {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 576px) {
+
+    #carruselPromociones .carousel-item img {
+        height: 260px;
+    }
+
+    #carruselPromociones .carousel-caption {
+        bottom: 2.5rem;
+        left: 4%;
+        right: 4%;
+        padding: 0.6rem;
+    }
+    #carruselPromociones .carousel-caption h2 {
+        font-size: 1.05rem;
+        margin-bottom: 0.3rem;
+    }
+
+    #carruselPromociones .carousel-caption p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    #carruselPromociones .carousel-indicators {
+        margin-bottom: 0.4rem;
+    }
+}
+
+#carruselPromociones .carousel-item {
+    position: relative !important;
+}
+
+#carruselPromociones .carousel-item img {
+    width: 100% !important;
+    height: 400px !important;
+    object-fit: cover !important;
+    filter: brightness(70%) !important;
+}
+
+/* Texto inferior */
+#carruselPromociones .carousel-caption {
+    position: absolute !important;
+
+    top: auto !important;
+    bottom: 0 !important;
+
+    left: 0 !important;
+    right: 0 !important;
+
+    transform: none !important;
+
+    width: 100% !important;
+
+    background: rgba(20, 33, 61, 0.92) !important;
+
+    padding: 20px 15px 45px !important;
+
+    border-radius: 0 !important;
+
+    color: #FFFFFF !important;
+
+    text-align: center !important;
+
+    text-shadow: none !important;
+
+    z-index: 5 !important;
+}
+
+#carruselPromociones .carousel-caption h2 {
+    color: #FFFFFF !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+}
+
+#carruselPromociones .carousel-caption p {
+    color: #FFFFFF !important;
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+}
+
+#carruselPromociones .carousel-indicators {
+    z-index: 10 !important;
+}
+
+@media (max-width: 576px) {
+
+    #carruselPromociones .carousel-item img {
+        height: 260px !important;
+    }
+
+    #carruselPromociones .carousel-caption {
+        padding: 12px 10px 35px !important;
+    }
+
+    #carruselPromociones .carousel-caption h2 {
+        font-size: 1.05rem !important;
+    }
+
+    #carruselPromociones .carousel-caption p {
+        font-size: 0.8rem !important;
+    }
+}
+
+
+footer {
+    color: var(--color-azul-noche);
+}
+
+footer h3 {
+    color: var(--color-azul-noche);
+}
+
+footer a {
+    color: var(--color-verde-hover);
+}
+
+footer a:hover {
+    color: var(--color-verde-active);
+}
+
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 3px;
+}
+
+
+@media (max-width: 768px) {
+
+    .portada {
+        padding: 1rem;
+    }
+
+    .portada img {
+        height: 350px;
+    }
+
+    #carruselPromociones .carousel-item img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .portada img {
+        height: 260px;
+    }
+
     #carruselPromociones .carousel-item img {
         height: 260px;
     }
@@ -279,4 +468,19 @@ article img {
         font-size: 0.8rem;
         margin-bottom: 0;
     }
+}
+
+/* Página activa del menú */
+.navbar .nav-link.active {
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+    border-radius: 50rem;
+    padding: 8px 16px;
+}
+
+/* Efecto al pasar el cursor */
+.navbar .nav-link:not(.active):hover {
+    background-color: rgba(30, 122, 79, 0.10);
+    color: var(--color-azul-noche);
+    border-radius: 50rem;
 }
