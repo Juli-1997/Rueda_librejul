@@ -1,8 +1,4 @@
-
-/* =========================================
-   1. IDENTIDAD VISUAL - RUEDA LIBRE 2.0
-========================================= */
-
+/*Identidad Visual*/
 :root {
     /* Colores de marca */
     --color-crema: #FAF6EF;
@@ -50,9 +46,7 @@ a {
     transition: var(--transicion);
 }
 
-
 /* Portada principal */
-
 .portada {
     background-color: var(--color-blanco);
     border-radius: var(--bs-border-radius-xl);
@@ -68,7 +62,6 @@ a {
 }
 
 /* Títulos de sección */
-
 .titulo-seccion {
     font-family: var(--fuente-titulos);
     color: var(--color-azul-noche);
@@ -78,7 +71,6 @@ a {
 }
 
 /* Pie de llamada a la acción */
-
 .pie-cta {
     background-color: var(--color-azul-noche);
     color: var(--color-blanco);
@@ -104,7 +96,6 @@ a {
     transform: translateY(-5px);
     box-shadow: var(--sombra-tarjeta);
 }
-
 
 .btn-verde-ruta {
     --bs-btn-color: #FFFFFF;
