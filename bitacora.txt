@@ -26,13 +26,13 @@ Rutas para las los archivos y sus paginas:
 Archivo Origen	        Destino	           Ruta Escrita
 index.html	            Inicio	           index.html
 index.html	            Tarifas y rutas	   paginas/tarifas.html
-index.html	            Reservas	       paginas/reservas.html
-paginas/tarifas.html	Inicio	           ../index.html
-paginas/tarifas.html	Tarifas y rutas	   tarifas.html
-paginas/tarifas.html	Reservas	       reservas.html
-paginas/reservas.html	Inicio	           ../index.html
-paginas/reservas.html	Tarifas y rutas	   tarifas.html
-paginas/reservas.html	Reservas	       reservas.html
+index.html	            Reservas	         paginas/reservas.html
+paginas/tarifas.html	  Inicio	           ../index.html
+paginas/tarifas.html	  Tarifas y rutas	   tarifas.html
+paginas/tarifas.html	  Reservas	         reservas.html
+paginas/reservas.html	  Inicio	           ../index.html
+paginas/reservas.html	  Tarifas y rutas	   tarifas.html
+paginas/reservas.html	  Reservas	         reservas.html
 
 -----ESQUEMAS DE REGIONES: -----
 (Encabezado):** Agrupa el nombre del negocio (`) y el menú.
