@@ -50,15 +50,15 @@ Elección de controles en reservas.html:
 
 -------Prueba de validación en el Formulario de reservas.html:---------
 
-Campo	    Dato de prueba	     Resultado esperado y obtenido
+Campo	      Dato de prueba	     Resultado esperado y obtenido
 Nombre	    Al	                 Rechazado por corto (mínimo 3 letras).
-Documento	12345 / abc12	     Rechazado por formato (6 a 10 números).
-Correo	    test.com	         Rechazado por falta de @.
+Documento	  12345 / abc12	       Rechazado por formato (6 a 10 números).
+Correo	    test.com	           Rechazado por falta de @.
 Celular	    4123456789	         Rechazado por no empezar con 3 o no tener 10 dígitos.
-Fecha	    2026-10-15	         Rechazado por estar fuera de rango (Nov-Dic 2026).
-Cantidad	7	                 En el navegador se bloquea por exceder el máximo (6).
-Plan	    Ninguno	             Bloqueado. Exige elegir una opción.
-Términos	Desmarcado	         Bloqueado. Es obligatorio marcar la casilla.
+Fecha	      2026-10-15	         Rechazado por estar fuera de rango (Nov-Dic 2026).
+Cantidad	  7	                   En el navegador se bloquea por exceder el máximo (6).
+Plan	      Ninguno	             Bloqueado. Exige elegir una opción.
+Términos	  Desmarcado	         Bloqueado. Es obligatorio marcar la casilla.
 
 Auditoría de accesibilidad(Hallazgos-correcciones)
 Tras la inspección técnica de las tres páginas (index.html, tarifas.html y reservas.html), se registraron y corrigieron los siguientes elementos para cumplir con los estándares de accesibilidad:
@@ -239,3 +239,9 @@ En conclusión, al migrar de css a bootstrap se redujeron mucho la cantidad de c
 
 
 Resumen de la semana: En la semana basicamente se pasó de tener todo en Css y se migró directamente a bootstrap, donde nos ahorrabamos muchas líneas en el archivo style.css, además de agregar promociones para atraer a más clientes. Y por último ver que todo se viera más personalizado y profesional.
+
+----Semana 3 día 1----
+Dieferencia entre los botones de bootstrap y tailwindcss:
+En bootstrap usé las clases prediseñadas btn y btn-primary, que permiten crear un botón rápidamente sin tener que definir manualmente sus colores, tamaños y estilos. Y hoy en tailwindcss, en lugar de utilizar una clase prediseñada, combiné diferentes clases de utilidad directamente en la etiqueta HTML. 
+Bootstrap permite utilizar componentes que ya tienen estilos establecidos, mientras que Tailwind permite construir diseños personalizados combinando clases de utilidad directamente en el HTML.
+
