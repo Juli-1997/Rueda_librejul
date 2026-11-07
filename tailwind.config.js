@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./nocturna/**/*.html",
-    "./nocturna/src/**/*.{html,js}",
-  ],
+  "./index.html",
+  "./src/**/*.{html,js}",
+  "./nocturna/**/*.html"
+],
   theme: {
     extend: {},
   },

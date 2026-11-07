@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
+        <h2 class="text-2xl font-bold text-slate-800">
+            Alertas
+        </h2>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg text-blue-800">
+            <h3 class="font-bold">Información</h3>
+            <p class="text-sm">
+                Esta es una alerta informativa para comunicar novedades.
+            </p>
+        </div>
+
+        <div role="status" class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-lg text-emerald-800">
+            <h3 class="font-bold">¡Operación exitosa!</h3>
+            <p class="text-sm">
+                Tu inscripción se ha realizado correctamente.
+            </p>
+        </div>
+
+        <div role="alert" class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-lg text-amber-800">
+            <h3 class="font-bold">Advertencia</h3>
+            <p class="text-sm">
+                Recuerda revisar los requisitos antes de inscribirte.
+            </p>
+        </div>
+    </section>
+
+    <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
+        <h2 class="text-2xl font-bold text-slate-800">
+            Campos de formulario
+        </h2>
+
+        <div class="space-y-2">
+            <label for="correo" class="block font-semibold text-slate-700">Correo electrónico</label>
+            <input type="email" id="correo" placeholder="ejemplo@correo.com" class="w-full border border-slate-300 
+                   rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400">
+
+            <p class="text-sm text-slate-500">
+                Ingresa un correo electrónico válido.
+            </p>
+        </div>
+
+        <div class="space-y-2">
+            <label for="celular" class="block font-semibold text-slate-700"> Número de celular</label>
+            <input type="tel" id="celular" placeholder="Ej: 300 123 4567" class="w-full border border-slate-300 
+                   rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400">
+
+            <p class="text-sm text-slate-500">
+                Escribe tu número de contacto.
+            </p>
+        </div>
+    </section>
+
+  </body>
+</html>

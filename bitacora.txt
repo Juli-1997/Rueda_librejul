@@ -80,13 +80,13 @@ Tras la inspección técnica de las tres páginas (index.html, tarifas.html y re
 
 Combinación de Colores	                              Relación de Contraste	  Clasificación de Accesibilidad (WCAG)
 Blanco (#FFFFFF) sobre Verde Ruta (#1E7A4F)	          5.31 : 1	              Apta para texto normal y texto grande.
-Blanco (#FFFFFF) sobre Naranja Pedal (#F39A2B)	      2.22 : 1	      		  No apta (Contraste insuficiente).
-Azul Noche (#14213D) sobre Naranja Pedal (#F39A2B)	  7.20 : 1				  Apta para texto normal y texto grande.
-Azul Noche (#14213D) sobre Crema (#FAF6EF)	          14.83 : 1				  Apta para texto normal y texto grande.
-Gris Asfalto (#5B6470) sobre Crema (#FAF6EF)	      5.57 : 1				  Apta para texto normal y texto grande.
-Verde Ruta (#1E7A4F) sobre Crema (#FAF6EF)	          4.93 : 1	 			  Apta para texto normal y texto grande.
-Naranja Pedal (#F39A2B) sobre Crema (#FAF6EF)	      2.06 : 1	 			  No apta (Contraste insuficiente).
-Blanco (#FFFFFF) sobre Azul Noche (#14213D)	          15.97 : 1				  Apta para texto normal y texto grande.
+Blanco (#FFFFFF) sobre Naranja Pedal (#F39A2B)	      2.22 : 1	      		    No apta (Contraste insuficiente).
+Azul Noche (#14213D) sobre Naranja Pedal (#F39A2B)	  7.20 : 1				        Apta para texto normal y texto grande.
+Azul Noche (#14213D) sobre Crema (#FAF6EF)	          14.83 : 1				        Apta para texto normal y texto grande.
+Gris Asfalto (#5B6470) sobre Crema (#FAF6EF)	        5.57 : 1				        Apta para texto normal y texto grande.
+Verde Ruta (#1E7A4F) sobre Crema (#FAF6EF)	          4.93 : 1	 			        Apta para texto normal y texto grande.
+Naranja Pedal (#F39A2B) sobre Crema (#FAF6EF)	        2.06 : 1	 			        No apta (Contraste insuficiente).
+Blanco (#FFFFFF) sobre Azul Noche (#14213D)	          15.97 : 1				        Apta para texto normal y texto grande.
 
 ----Mapa Definitivo de Uso del Color para CSS----
 Para garantizar la accesibilidad total del sitio defino la siguiente distribución de estilos basada estrictamente en los resultados aprobados de la tabla de contraste:
@@ -250,3 +250,15 @@ Bootstrap permite utilizar componentes que ya tienen estilos establecidos, mient
 -Que no uso: Una clase que no uso es .bg-pink-500 y por ello no está en output.css generado.
 -Por qué ocurre?: Esto ocurre porque tailwindcss analiza las clases utilizadas en los archivos del proyecto y genera únicamente los estilos necesarios, es decir los que he utilizado. Esto permite reducir el tamaño del archivo CSS y evitar código innecesario.
 
+---Reglas del kit de diseño:-----
+--Elemento--	        --Regla--
+Bordes	              rounded-lg
+Espaciado pequeño	    p-2, gap-2
+Espaciado mediano	    p-4, gap-4
+Espaciado grande	    p-6, gap-6
+Color principal	      amber-400
+Texto principal	      slate-800
+Texto secundario	    slate-500
+Bordes	              slate-300
+Sombra	              shadow-md
+Foco	                focus:ring-2 focus:ring-amber-400
