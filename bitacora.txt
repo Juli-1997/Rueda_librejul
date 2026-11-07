@@ -245,3 +245,8 @@ Dieferencia entre los botones de bootstrap y tailwindcss:
 En bootstrap usé las clases prediseñadas btn y btn-primary, que permiten crear un botón rápidamente sin tener que definir manualmente sus colores, tamaños y estilos. Y hoy en tailwindcss, en lugar de utilizar una clase prediseñada, combiné diferentes clases de utilidad directamente en la etiqueta HTML. 
 Bootstrap permite utilizar componentes que ya tienen estilos establecidos, mientras que Tailwind permite construir diseños personalizados combinando clases de utilidad directamente en el HTML.
 
+---Clases que uso y las que no uso---
+-Que uso: Una clase que uso en index es .bg-amber-400, y está en output.css, y es la que uso en la etiqueta y en el botón de "inscríbete"
+-Que no uso: Una clase que no uso es .bg-pink-500 y por ello no está en output.css generado.
+-Por qué ocurre?: Esto ocurre porque tailwindcss analiza las clases utilizadas en los archivos del proyecto y genera únicamente los estilos necesarios, es decir los que he utilizado. Esto permite reducir el tamaño del archivo CSS y evitar código innecesario.
+
