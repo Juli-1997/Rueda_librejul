@@ -1,11 +1,78 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
+    <link rel="stylesheet" href="./src/output.css">  
+    <title>Componentes de mi Kit</title> 
+</head>
   <body>
+    <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
+        <h2 class="text-2xl font-bold text-slate-800">
+            Botones
+        </h2>
+
+        <div class="flex flex-wrap gap-4">
+            <button class="bg-amber-400 text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-300 transition-colors">
+                Inscribirme
+            </button>
+
+            <button class="bg-slate-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors">
+                Ver rutas
+            </button>
+
+            <button class="border border-amber-400 text-amber-500 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400
+                hover:text-slate-900 transition-colors">
+                Más información
+            </button>
+        </div>
+    </section>
+
+    <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
+        <h2 class="text-2xl font-bold text-slate-800">
+            Tarjeta de ruta
+        </h2>
+
+        <article class="w-full max-w-sm bg-slate-600 text-white border border-slate-700 rounded-lg shadow-md overflow-hidden">
+            <img src="../img/lucescentro.jpg" alt="Luces del Centro" class="w-full h-52 object-cover">
+            <div class="p-5 space-y-3">
+                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded-full">
+                    Nivel: Fácil
+                </span>
+
+                <h3 class="text-xl font-bold">
+                    Luces del Centro
+                </h3>
+
+                <div class="grid grid-cols-3 gap-3 text-sm">
+                    <div>
+                        <p class="text-slate-300">Distancia</p>
+                        <p>10 km</p>
+                    </div>
+
+                    <div>
+                        <p class="text-slate-300">Duración</p>
+                        <p>2 h</p>
+                    </div>
+
+                    <div>
+                        <p class="text-slate-300">Salida</p>
+                        <p>Sede Rueda Libre</p>
+                    </div>
+                </div>
+
+                <p class="text-2xl font-bold">
+                    $55.000
+                </p>
+
+                <a href="#inscripcion" class="block w-full text-center bg-amber-400 text-slate-900 font-semibold 
+                    px-6 py-3 rounded-lg hover:bg-amber-300 transition-colors">
+                    Inscríbete
+                </a>
+            </div>
+        </article>
+    </section>
+
     <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
         <h2 class="text-2xl font-bold text-slate-800">
             Alertas
@@ -58,6 +125,5 @@
             </p>
         </div>
     </section>
-
   </body>
 </html>

@@ -1,212 +1,361 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rueda Nocturna · Jueves a sábado</title>
+    <meta name="description" content="Rueda Libre: descubre Medellín sobre dos ruedas.">
+    <title>Rueda Libre | Rutas nocturnas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="./src/output.css">
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="bg-[#FAF6EF] text-[#14213D]" style="font-family: 'Open Sans', sans-serif;">
 
-    <main class="max-w-5xl mx-auto px-6 py-20">
-        <section class="bg-slate-900 px-6 py-16 md:px-16 text-center rounded-2xl shadow-xl">
-            <p class="inline-block bg-amber-400 text-slate-950 px-4 py-2 text-sm font-bold uppercase tracking-widest mb-8">
-                Nuevo · Jueves a sábado
-            </p>
+    <header class="bg-[#14213D] text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="#inicio" class="flex items-center gap-2">
+                <img src="../img/logo_nocturno.png" alt="Bicicleta" style="width: 32px; height: 32px; object-fit: contain;">
+                <span class="text-4xl font-bold">
+                    Rueda Libre
+                </span>
+            </a>
 
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                Rueda Nocturna
-            </h1>
+            <nav aria-label="Navegación principal" class="flex flex-wrap justify-center items-center gap-5">
+                <a href="#inicio" class="font-semibold hover:text-amber-600 transition-colors">
+                    Inicio
+                </a>
 
-            <h3 class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
-                Descubre Medellín en bici cuando se encienden las luces
-            </h3>
+                <a href="#rutas" class="font-semibold hover:text-amber-600 transition-colors">
+                    Rutas
+                </a>
 
-            <section class="flex flex-col sm:flex-row justify-center gap-6">
-                <article class="max-w-sm mx-auto bg-blue-800 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="../img/cieloestrellado.jpg" alt="Ciclistas de noche">
+                <a href="#como-funciona" class="font-semibold hover:text-amber-600 transition-colors">
+                    ¿Cómo funciona?
+                </a>
+            </nav>
 
-                    <div class="p-5">
-                        <h2 class="text-xl font-bold text-center text-white">
-                            3 Rutas
-                        </h2>
-                    </div>
+            <a href="#inscripcion" class="bg-amber-400 text-[#14213D] font-bold px-6 py-3 rounded-full shadow-md 
+                hover:bg-amber-300 transition-colors">
+                Inscríbete
+            </a>
+        </div>
+    </header>
 
-                </article>
+    <main class="bg-slate-950 text-white">
+        <section id="inicio" class="py-16">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6" style="font-family: 'Montserrat', sans-serif;">
+                        Descubre Medellín sobre dos ruedas
+                    </h2>
 
-                <article class="max-w-sm mx-auto bg-blue-800 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="../img/datointeresante.jpg" alt="Experiencia de ciclismo nocturno">
-                    <div class="p-5">
-                        <h2 class="text-xl font-bold text-center text-white">
-                            Desde $55.000
-                        </h2>
-                    </div>
-                </article>
-            </section>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Somos Rueda Libre, una experiencia de recorridos
+                        nocturnos en bicicleta para explorar la ciudad,
+                        disfrutar de sus paisajes y compartir nuevas aventuras.
+                    </p>
 
-            <section class="mt-12">
-                <h2 class="text-xl font-bold mb-6">
-                    Elige tu experiencia
-                </h2>
-
-                <div class="flex flex-wrap justify-center gap-10">
-                    <a href="#inscripcion" class="bg-amber-400 text-slate-950 px-8 py-4 text-base font-bold uppercase tracking-wider rounded-lg shadow-md transition-all duration-300 hover:bg-amber-300 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-amber-200 focus:ring-offset-2 focus:ring-offset-slate-900">
-                        Inscríbete
+                    <a href="#rutas" class="inline-block bg-amber-400 text-[#14213D] font-bold px-7 py-3 rounded-full
+                              shadow-md hover:bg-amber-300 transition-colors">
+                        Explora nuestras rutas
                     </a>
-
-                    <button type="button"
-                            class="bg-slate-700 text-white px-8 py-4 text-base font-bold uppercase tracking-wider rounded-lg shadow-md transition-all duration-300 hover:bg-slate-600 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-slate-300 focus:ring-offset-2 focus:ring-offset-slate-900">
-                        Ver rutas
-                    </button>
-
-                    <button type="button" class="border-2 border-amber-400 text-amber-400 px-8 py-4 text-base font-bold uppercase tracking-wider rounded-lg transition-all duration-300 hover:bg-amber-400 hover:text-slate-950 focus:outline-none focus:ring-4 focus:ring-amber-200 focus:ring-offset-2 focus:ring-offset-slate-900">
-                        Más información
-                    </button>
                 </div>
-            </section>
-        </section>
-        
-        <!-- RUUUUTAAAAAAASsss -->
-        <section id="rutas" class="mt-20">
-            <div class="text-center p-10 mb-10">
-                <p class="text-amber-400 text-xl font-bold uppercase tracking-widest mb-3">
-                    Campaña Rueda Libre
-                </p>
 
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    Nuestras rutas nocturnas
+                <div>
+                    <img src="../img/cieloestrellado.jpg" alt="Bicicleta en un paisaje" class="w-full h-60 
+                        sm:h-64 md:h-80 lg:h-[420px] object-cover rounded-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-950 text-white" id="rutas" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" style="font-family: 'Montserrat', sans-serif;">
+                    Nuestras rutas
                 </h2>
 
-                <p class="text-slate-300 max-w-2xl mx-auto">
-                    Explora Medellín bajo las estrellas. Todas nuestras rutas
-                    incluyen bicicleta, casco, luces LED, chaleco reflectivo y guía.
+                <p class="text-center text-slate-600 mb-10">
+                    Elige tu recorrido y vive Medellín de una manera diferente.
                 </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="w-full bg-slate-600 text-white border border-slate-700 rounded-xl shadow-md 
+                        overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:border-amber-400">
+                        <img src="../img/lucescentro.jpg" alt="Recorrido nocturno por el centro" class="w-full 
+                            h-52 object-cover">
+                        <div class="p-5 space-y-3">
+                            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 
+                                py-1 rounded-full">
+                                Nivel: Fácil
+                            </span>
+
+                            <h3 class="text-xl font-bold">
+                                Luces del Centro
+                            </h3>
+
+                            <div class="grid grid-cols-3 gap-3 text-sm">
+                                <div>
+                                    <p class="text-slate-300">Distancia</p>
+                                    <p class="font-semibold">10 km</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-slate-300">Duración</p>
+                                    <p class="font-semibold">2 h</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-slate-300">Encuentro</p>
+                                    <p class="font-semibold">Sede Rueda Libre</p>
+                                </div>
+                            </div>
+
+                            <p class="text-2xl font-bold">
+                                $55.000
+                            </p>
+
+                            <a href="#inscripcion" class="block w-full text-center bg-amber-400 text-slate-900 
+                                font-semibold px-6 py-3 rounded-full hover:bg-amber-300 transition-colors">
+                                Inscríbete
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="w-full bg-slate-600 text-white border border-slate-700 rounded-xl shadow-md 
+                        overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:border-amber-400">
+                        <img src="../img/mirador.jpg" alt="Recorrido por los miradores de Medellín" class="w-full 
+                        h-52 object-cover">
+                        <div class="p-5 space-y-3">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 
+                            rounded-full">
+                                Nivel: Medio
+                            </span>
+
+                            <h3 class="text-xl font-bold">
+                                Miradores de la Ciudad
+                            </h3>
+
+                            <div class="grid grid-cols-3 gap-3 text-sm">
+                                <div>
+                                    <p class="text-slate-300">Distancia</p>
+                                    <p class="font-semibold">16 km</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-slate-300">Duración</p>
+                                    <p class="font-semibold">3 h</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-slate-300">Encuentro</p>
+                                    <p class="font-semibold">Sede Rueda Libre</p>
+                                </div>
+                            </div>
+
+                            <p class="text-2xl font-bold">
+                                $75.000
+                            </p>
+
+                            <a href="#inscripcion" class="block w-full text-center bg-amber-400 text-slate-900 
+                            font-semibold px-6 py-3 rounded-full hover:bg-amber-300 transition-colors">
+                                Inscríbete
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="w-full bg-slate-600 text-white border border-slate-700 rounded-xl shadow-md 
+                    overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:border-amber-400">
+                        <img src="../img/lunapalmas.jpg"alt="Recorrido nocturno por Las Palmas" class="w-full h-52 object-cover">
+                        <div class="p-5 space-y-3">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full">
+                                Nivel: Difícil
+                            </span>
+
+                            <h3 class="text-xl font-bold">
+                                Luna en Las Palmas
+                            </h3>
+
+                            <div class="grid grid-cols-3 gap-3 text-sm">
+                                <div>
+                                    <p class="text-slate-300">Distancia</p>
+                                    <p class="font-semibold">22 km</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-slate-300">Duración</p>
+                                    <p class="font-semibold">3,5 h</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-slate-300">Encuentro</p>
+                                    <p class="font-semibold">Sede Rueda Libre</p>
+                                </div>
+
+                            </div>
+
+                            <p class="text-2xl font-bold">
+                                $95.000
+                            </p>
+
+                            <a href="#inscripcion" class="block w-full text-center bg-amber-400 text-slate-900 
+                            font-semibold px-6 py-3 rounded-full hover:bg-amber-300 transition-colors">
+                                Inscríbete
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </section>
+ 
+        <section id="como-funciona" class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" style="font-family: 'Montserrat', sans-serif;">
+                    ¿Cómo funciona?
+                </h2>
 
-            <div class="flex flex-col items-center gap-8">
-                <article class="w-full max-w-2xl bg-slate-600 text-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:border-amber-400">
-                    <img class="w-full h-48 object-cover" src="../img/lucescentro.jpg" alt="Luces del Centro">
+                <p class="text-center text-slate-600 mb-10">
+                    Cuatro sencillos pasos para comenzar tu aventura.
+                </p>
 
-                    <div class="p-5 space-y-3">
-                        <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded-full">
-                            Nivel: Fácil
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <article class="bg-white p-6 rounded-xl shadow-xl border border-slate-200">
+                        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-400 
+                        text-[#14213D] text-xl font-bold mb-4">
+                            1
                         </span>
 
-                        <h3 class="text-xl font-bold text-slate-900">
-                            Luces del Centro
+                        <h3 class="text-xl text-slate-950 font-bold mb-2">
+                            Elige tu ruta
                         </h3>
 
-                        <dl class="grid grid-cols-3 gap-4">
-                            <div>
-                                <dt class="text-xs text-slate-300">Distancia</dt>
-                                <dd class="font-semibold text-white">10 km</dd>
-                            </div>
-
-                            <div>
-                                <dt class="text-xs text-slate-300">Duración</dt>
-                                <dd class="font-semibold text-white">2 h</dd>
-                            </div>
-
-                            <div>
-                                <dt class="text-xs text-slate-300">Punto de encuentro</dt>
-                                <dd class="font-semibold text-white">Sede de Rueda Libre</dd>
-                            </div>
-                        </dl>
-
-                        <p class="text-2xl font-bold text-slate-900">
-                            $55.000
+                        <p class="text-slate-600">
+                            Explora nuestras opciones y selecciona el recorrido que más te guste.
                         </p>
+                    </article>
 
-                        <a href="#inscripcion"
-                        class="block text-center bg-amber-400 text-slate-900 font-semibold px-6 py-3 rounded-full hover:bg-amber-300 transition-colors">
-                            Inscríbete
-                        </a>
-
-                    </div>
-                </article>
-
-                <article class="w-full max-w-2xl bg-slate-600 text-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:border-amber-400">
-                    <img class="w-full h-48 object-cover" src="../img/mirador.jpg" alt="Miradores de la Ciudad">
-                    <div class="p-5 space-y-3">
-                        <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full">
-                            Nivel: Medio
+                    <article class="bg-white p-6 rounded-xl shadow-xl border border-slate-200">
+                        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-400 
+                        text-[#14213D] text-xl font-bold mb-4">
+                            2
                         </span>
 
-                        <h3 class="text-xl font-bold text-slate-900">
-                            Miradores de la Ciudad
+                        <h3 class="text-xl text-slate-950 font-bold mb-2">
+                            Inscríbete
                         </h3>
 
-                        <dl class="grid grid-cols-3 gap-2">
-                            <div>
-                                <dt class="text-xs text-slate-500">Distancia</dt>
-                                <dd class="font-semibold">16 km</dd>
-                            </div>
-
-                            <div>
-                                <dt class="text-xs text-slate-500">Duración</dt>
-                                <dd class="font-semibold">3 h</dd>
-                            </div>
-
-                            <div>
-                                <dt class="text-xs text-slate-500">Punto de encuentro</dt>
-                                <dd class="font-semibold">Sede de Rueda Libre</dd>
-                            </div>
-                        </dl>
-
-                        <p class="text-2xl font-bold text-slate-900">
-                            $75.000
+                        <p class="text-slate-600">
+                            Completa tu inscripción y reserva tu lugar en el recorrido.
                         </p>
+                    </article>
 
-                        <a href="#inscripcion"
-                        class="block text-center bg-amber-400 text-slate-900 font-semibold px-6 py-3 rounded-full hover:bg-amber-300 transition-colors">
-                            Inscríbete
-                        </a>
-                    </div>
-                </article>
-
-                <article class="w-full max-w-2xl bg-slate-600 text-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-2xl hover:border-amber-400">
-                    <img class="w-full h-48 object-cover" src="../img/lunapalmas.jpg" alt="Luna en Las Palmas">
-                    <div class="p-5 space-y-3">
-                        <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-full">
-                            Nivel: Difícil
+                    <article class="bg-white p-6 rounded-xl shadow-xl border border-slate-200">
+                        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-400 
+                        text-[#14213D] text-xl font-bold mb-4">
+                            3
                         </span>
 
-                        <h3 class="text-xl font-bold text-slate-900">
-                            Luna en Las Palmas
+                        <h3 class="text-xl text-slate-950 font-bold mb-2">
+                            Recoge tu equipo
                         </h3>
 
-                        <dl class="grid grid-cols-3 gap-2">
-                            <div>
-                                <dt class="text-xs text-slate-500">Distancia</dt>
-                                <dd class="font-semibold">22 km</dd>
-                            </div>
-
-                            <div>
-                                <dt class="text-xs text-slate-500">Duración</dt>
-                                <dd class="font-semibold">3,5 h</dd>
-                            </div>
-
-                            <div>
-                                <dt class="text-xs text-slate-500">Punto de encuentro</dt>
-                                <dd class="font-semibold">Sede de Rueda Libre</dd>
-                            </div>
-                        </dl>
-
-                        <p class="text-2xl font-bold text-slate-900">
-                            $95.000
+                        <p class="text-slate-600">
+                            Recibe tu bicicleta y los elementos necesarios para disfrutar con seguridad.
                         </p>
+                    </article>
 
-                        <a href="#inscripcion"
-                        class="block text-center bg-amber-400 text-slate-900 font-semibold px-6 py-3 rounded-full hover:bg-amber-300 transition-colors">
-                            Inscríbete
-                        </a>
-                    </div>
-                </article>
+                    <article class="bg-white p-6 rounded-xl shadow-xl border border-slate-200">
+                        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-400 
+                        text-[#14213D] text-xl font-bold mb-4">
+                            4
+                        </span>
 
+                        <h3 class="text-xl text-slate-950 font-bold mb-2">
+                            ¡Rueda!
+                        </h3>
+
+                        <p class="text-slate-600">
+                            Disfruta el recorrido, conoce nuevos lugares y vive la experiencia Rueda Libre.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscripcion" class="bg-[#14213D] py-12">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-white mb-3" style="font-family: 'Montserrat', sans-serif;">
+                        ¿Listo para rodar?
+                    </h2>
+
+                    <p class="text-slate-200 text-lg">
+                        Inscríbete y comienza tu aventura nocturna con Rueda Libre.
+                    </p>
+                </div>
+
+                <a href="mailto:hola@ruedalibre.example"
+                   class="bg-amber-400 text-[#14213D] font-bold px-8 py-4 rounded-full shadow-md hover:bg-amber-300
+                   transition-colors whitespace-nowrap">
+                    ¡Inscríbete ahora!
+                </a>
             </div>
         </section>
     </main>
+
+    <footer class="bg-slate-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-8">
+            <div class="flex-1">
+                <h3 class="text-xl font-bold mb-3" style="font-family: 'Montserrat', sans-serif;">
+                    Rueda Libre
+                </h3>
+
+                <p class="text-slate-300">
+                    Descubre Medellín sobre dos ruedas.
+                </p>
+
+                <p class="text-slate-400 mt-3">
+                    © 2026 Rueda Libre
+                </p>
+            </div>
+
+            <div class="flex-1">
+                <h3 class="text-xl font-bold mb-3">
+                    Contáctanos
+                </h3>
+
+                <p class="text-slate-300 mb-2">
+                    Correo:
+                    <a href="mailto:hola@ruedalibre.example" class="text-amber-400 hover:underline">
+                        hola@ruedalibre.example
+                    </a>
+                </p>
+
+                <p class="text-slate-300">
+                    WhatsApp:
+                    <a href="https://wa.me/573000000000" class="text-amber-400 hover:underline">
+                        300 000 0000
+                    </a>
+                </p>
+            </div>
+
+            <div class="flex-1">
+                <h3 class="text-xl font-bold mb-3">
+                    Horario de atención
+                </h3>
+
+                <p class="text-slate-300 mb-2">
+                    Lunes a viernes: 7:00 a. m. a 7:00 p. m.
+                </p>
+
+                <p class="text-slate-300">
+                    Sábados, domingos y festivos:
+                    6:00 a. m. a 2:00 p. m.
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
