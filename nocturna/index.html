@@ -11,35 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap"
           rel="stylesheet">
-
     <link rel="stylesheet" href="./src/output.css">
-
-    <script>
-        // Recuperar el tema guardado
-        if (localStorage.getItem("tema") === "oscuro") {
-            document.documentElement.classList.add("dark");
-        }
-    </script>
 </head>
 
-<body class="bg-crema text-azul-noche dark:bg-fondo-nocturno dark:text-blanco"
-      style="font-family: 'Open Sans', sans-serif;">
-
+<body class="bg-crema text-azul-noche dark:bg-fondo-nocturno dark:text-blanco" style="font-family: 'Open Sans', sans-serif;">
     <header class="bg-azul-noche text-blanco shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-
             <a href="#inicio" class="flex items-center gap-2">
-                <img src="../img/logo_nocturno.png" alt="Bicicleta"
-                     style="width: 32px; height: 32px; object-fit: contain;">
-
+                <img src="../img/logo_nocturno.png" alt="Bicicleta" style="width: 32px; height: 32px; object-fit: contain;">
                 <span class="text-4xl font-bold">
                     Rueda Libre
                 </span>
             </a>
 
-            <nav aria-label="Navegación principal"
-                 class="hidden md:flex flex-wrap justify-center items-center gap-5">
-
+            <nav aria-label="Navegación principal" class="hidden md:flex flex-wrap justify-center items-center gap-5">
                 <a href="#inicio" class="font-semibold hover:text-amarillo-farol transition-colors">
                     Inicio
                 </a>

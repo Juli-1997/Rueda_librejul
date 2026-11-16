@@ -1,42 +1,45 @@
+
 <!doctype html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/output.css">  
-    <title>Componentes de mi Kit</title> 
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Componentes de mi Kit</title>
 </head>
-  <body>
+
+<body class="bg-crema text-azul-noche">
+
     <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
-        <h2 class="text-2xl font-bold text-slate-800">
+        <h2 class="text-2xl font-bold text-azul-noche">
             Botones
         </h2>
 
         <div class="flex flex-wrap gap-4">
-            <button class="bg-amber-400 text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-300 transition-colors">
+            <button class="bg-naranja-pedal text-azul-noche font-semibold px-6 py-3 rounded-lg hover:bg-amarillo-farol transition-colors">
                 Inscribirme
             </button>
 
-            <button class="bg-slate-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors">
+            <button class="bg-azul-noche text-blanco font-semibold px-6 py-3 rounded-lg hover:bg-gris-asfalto transition-colors">
                 Ver rutas
             </button>
 
-            <button class="border border-amber-400 text-amber-500 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400
-                hover:text-slate-900 transition-colors">
+            <button class="border border-naranja-pedal text-naranja-pedal font-semibold px-6 py-3 rounded-lg hover:bg-naranja-pedal hover:text-azul-noche transition-colors">
                 Más información
             </button>
         </div>
     </section>
 
     <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
-        <h2 class="text-2xl font-bold text-slate-800">
+        <h2 class="text-2xl font-bold text-azul-noche">
             Tarjeta de ruta
         </h2>
 
-        <article class="w-full max-w-sm bg-slate-600 text-white border border-slate-700 rounded-lg shadow-md overflow-hidden">
+        <article class="w-full max-w-sm bg-blanco text-azul-noche border border-gris-suave rounded-lg shadow-md overflow-hidden">
             <img src="../img/lucescentro.jpg" alt="Luces del Centro" class="w-full h-52 object-cover">
+
             <div class="p-5 space-y-3">
-                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-1 rounded-full">
+                <span class="inline-block bg-verde-ruta text-blanco text-xs font-semibold px-2 py-1 rounded-full">
                     Nivel: Fácil
                 </span>
 
@@ -46,17 +49,17 @@
 
                 <div class="grid grid-cols-3 gap-3 text-sm">
                     <div>
-                        <p class="text-slate-300">Distancia</p>
+                        <p class="text-gris-asfalto">Distancia</p>
                         <p>10 km</p>
                     </div>
 
                     <div>
-                        <p class="text-slate-300">Duración</p>
+                        <p class="text-gris-asfalto">Duración</p>
                         <p>2 h</p>
                     </div>
 
                     <div>
-                        <p class="text-slate-300">Salida</p>
+                        <p class="text-gris-asfalto">Salida</p>
                         <p>Sede Rueda Libre</p>
                     </div>
                 </div>
@@ -65,8 +68,7 @@
                     $55.000
                 </p>
 
-                <a href="#inscripcion" class="block w-full text-center bg-amber-400 text-slate-900 font-semibold 
-                    px-6 py-3 rounded-lg hover:bg-amber-300 transition-colors">
+                <a href="#inscripcion" class="block w-full text-center bg-naranja-pedal text-azul-noche font-semibold px-6 py-3 rounded-lg hover:bg-amarillo-farol transition-colors">
                     Inscríbete
                 </a>
             </div>
@@ -74,25 +76,25 @@
     </section>
 
     <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
-        <h2 class="text-2xl font-bold text-slate-800">
+        <h2 class="text-2xl font-bold text-azul-noche">
             Alertas
         </h2>
 
-        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg text-blue-800">
+        <div class="bg-gris-suave border-l-4 border-azul-noche p-4 rounded-lg text-azul-noche">
             <h3 class="font-bold">Información</h3>
             <p class="text-sm">
                 Esta es una alerta informativa para comunicar novedades.
             </p>
         </div>
 
-        <div role="status" class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-lg text-emerald-800">
+        <div role="status" class="bg-verde-ruta border-l-4 border-verde-ruta p-4 rounded-lg text-blanco">
             <h3 class="font-bold">¡Operación exitosa!</h3>
             <p class="text-sm">
                 Tu inscripción se ha realizado correctamente.
             </p>
         </div>
 
-        <div role="alert" class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-lg text-amber-800">
+        <div role="alert" class="bg-amarillo-farol border-l-4 border-naranja-pedal p-4 rounded-lg text-azul-noche">
             <h3 class="font-bold">Advertencia</h3>
             <p class="text-sm">
                 Recuerda revisar los requisitos antes de inscribirte.
@@ -101,29 +103,29 @@
     </section>
 
     <section class="w-full max-w-4xl mx-auto p-6 space-y-5">
-        <h2 class="text-2xl font-bold text-slate-800">
+        <h2 class="text-2xl font-bold text-azul-noche">
             Campos de formulario
         </h2>
 
         <div class="space-y-2">
-            <label for="correo" class="block font-semibold text-slate-700">Correo electrónico</label>
-            <input type="email" id="correo" placeholder="ejemplo@correo.com" class="w-full border border-slate-300 
-                   rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400">
+            <label for="correo" class="block font-semibold text-azul-noche">
+                Correo electrónico
+            </label>
 
-            <p class="text-sm text-slate-500">
+            <input type="email" id="correo" placeholder="ejemplo@correo.com" class="w-full border border-gris-asfalto rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-naranja-pedal focus:border-naranja-pedal">
+            <p class="text-sm text-gris-asfalto">
                 Ingresa un correo electrónico válido.
             </p>
         </div>
 
         <div class="space-y-2">
-            <label for="celular" class="block font-semibold text-slate-700"> Número de celular</label>
-            <input type="tel" id="celular" placeholder="Ej: 300 123 4567" class="w-full border border-slate-300 
-                   rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400">
+            <label for="celular" class="block font-semibold text-azul-noche">Número de celular</label>
+            <input type="tel" id="celular" placeholder="Ej: 300 123 4567" class="w-full border border-gris-asfalto rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-naranja-pedal focus:border-naranja-pedal">
 
-            <p class="text-sm text-slate-500">
+            <p class="text-sm text-gris-asfalto">
                 Escribe tu número de contacto.
             </p>
         </div>
     </section>
-  </body>
+</body>
 </html>
