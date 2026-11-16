@@ -276,3 +276,17 @@ Adapté la página principal de Rueda Libre(la 2.0v), reemplazando los estilos y
 
 --Y tilicé Flexbox en el encabezado y el pie de página, porque permite distribuir los elementos horizontalmente, alinearlos y mantener una organización flexible.
 
+--Elementos(Algunos) que se rompen con 360px--
+-Tarjetas de ruta: Se muestran una debajo de otra, haciendo que la página sea más larga.
+-Información de las rutas: La información de distancia, duración y lugar de encuentro se distribuye en tres columnas pequeñas, por lo que algunos textos pueden quedar muy ajustados.
+-Pasos de funcionamiento: Se organizan verticalmente, aumentando el desplazamiento de la página.
+-Sección de inscripción: El texto y el botón se muestran uno debajo del otro.
+-Pie de página: Las secciones de información y contacto se organizan verticalmente.
+
+---Prueba de modo de dispositivos---
+-360px: El contenido se organiza en una sola columna. Las tarjetas de las rutas aparecen una debajo de otra y las imágenes se ajustan al ancho de la pantalla. El menú de navegación se oculta y permanece visible el botón de inscripción.
+-768px: Se activa la distribución de dos columnas en las secciones que utilizan el punto de quiebre md. Las tarjetas de rutas se muestran en dos columnas y el contenido tiene una mejor distribución.
+-1024px: Se aprovecha mejor el espacio horizontal. Las tarjetas de rutas se organizan en tres columnas y los pasos de funcionamiento en cuatro columnas.
+-1280px: La página presenta una distribución amplia y organizada. Se mantienen las tres columnas de rutas, los cuatro pasos de funcionamiento y el contenido centrado dentro de un ancho máximo.
+
+
