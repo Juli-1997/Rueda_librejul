@@ -1,3 +1,32 @@
+
 @import "tailwindcss";
 
-@source "../index.html";
+/* Identidad visual y colores de Rueda Libre */
+@theme {
+    /* Colores de marca original */
+    --color-crema: #FAF6EF;
+    --color-blanco: #FFFFFF;
+    --color-azul-noche: #14213D;
+    --color-gris-asfalto: #5B6470;
+    --color-gris-suave: #EAECEF;
+    --color-verde-ruta: #1E7A4F;
+    --color-verde-hover: #165B3A;
+    --color-verde-active: #10472E;
+    --color-naranja-pedal: #F39A2B;
+    --color-amarillo-farol: #FFD166;
+
+    /* Colores de la apariencia nocturna actual */
+    --color-fondo-nocturno: #020617;
+    --color-tarjeta-nocturna: #475569;
+    --color-borde-nocturno: #334155;
+    --color-texto-nocturno: #CBD5E1;
+    --color-texto-claro-nocturno: #FFFFFF;
+    --color-texto-secundario-nocturno: #E2E8F0;
+    --color-footer-nocturno: #0F172A;
+
+    /* Tipografías */
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+}
+
+
