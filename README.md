@@ -4,7 +4,7 @@
 
 Rueda Libre es un proyecto web enfocado en el alquiler de bicicletas y en la promoción de recorridos por Medellín.
 
-El proyecto cuenta con un sitio web principal desarrollado con Bootstrap y una landing page complementaria llamada **Rueda Nocturna**, desarrollada con Tailwind CSS. Esta última presenta una campaña de recorridos nocturnos en bicicleta e incluye información sobre las rutas y un formulario de inscripción.
+El proyecto cuenta con un sitio web principal desarrollado con Bootstrap y una landing page complementaria llamada **Rueda Nocturna**, desarrollada con Tailwind CSS. Esta última presenta una campaña una campaña que invita a los usuarios a disfrutar recorridos en bicicleta por Medellín durante la noche, e incluye información sobre las rutas y un formulario de inscripción.
 
 ## 2. Enlaces del proyecto
 
@@ -16,7 +16,7 @@ El proyecto cuenta con un sitio web principal desarrollado con Bootstrap y una l
 
 ### Sitio original – Rueda Libre
 
-Sitio web principal desarrollado con Bootstrap. Incluye las secciones y páginas informativas del servicio de alquiler de bicicletas.
+Sitio web principal desarrollado con Bootstrap. Incluye las secciones y páginas informativas del servicio de alquiler de bicicletas y los palnes de recorridos en la ciudad de Medellín.
 
 ### Landing page – Rueda Nocturna
 
