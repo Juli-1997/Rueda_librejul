@@ -289,4 +289,86 @@ Adapté la página principal de Rueda Libre(la 2.0v), reemplazando los estilos y
 -1024px: Se aprovecha mejor el espacio horizontal. Las tarjetas de rutas se organizan en tres columnas y los pasos de funcionamiento en cuatro columnas.
 -1280px: La página presenta una distribución amplia y organizada. Se mantienen las tres columnas de rutas, los cuatro pasos de funcionamiento y el contenido centrado dentro de un ancho máximo.
 
+--Comparación de TAILWIND CSS y BOOTSTRAP---
+
+---Identificación de clases más utilizadas en Tailwind CSS---
+
+Al revisar el archivo HTML de la página principal de Rueda Libre, identifiqué algunas combinaciones de clases que se repiten en diferentes elementos:
+
+- Tarjetas exteriores de las rutas: 3 apariciones.
+- Contenedores internos de las tarjetas (p-5 space-y-3): 3 apariciones.
+- Cuadrículas de información (grid grid-cols-3 gap-3 text-sm): 3 apariciones.
+- Textos de información de las rutas (text-gris-asfalto dark:text-slate-300): 9 apariciones.
+- Tarjetas de la sección "¿Cómo funciona?": 4 apariciones.
+- Círculos numerados de los pasos: 4 apariciones.
+- Títulos de los pasos (text-xl font-bold mb-2): 4 apariciones.
+
+-->Identificar estas repeticiones me permitió reconocer qué estilos podían convertirse en componentes reutilizables para evitar escribir las mismas combinaciones de clases varias veces.
+
+---Creación de componentes reutilizables con @apply---
+
+Utilicé la directiva @apply de Tailwind CSS dentro de @layer components para crear clases propias que reúnen varios estilos de utilidad.
+
+Creé tres clases:
+
+1. .btn-ruta: reúne los estilos de los botones de inscripción de las tarjetas de rutas, incluyendo color de fondo, color de texto, grosor de fuente, bordes redondeados y efecto hover.
+
+2. .btn-destacado: reúne los estilos de los botones destacados, utilizando el color amarillo de la identidad visual de Rueda Libre, texto azul oscuro, negrita, sombra y efecto hover.
+
+3. .btn-destacado-grande: para el botón de inscribirme ahora
+
+De esta manera, pude reutilizar los estilos en diferentes botones sin repetir todas las clases de utilidad en cada etiqueta HTML. También mantuve las clases de distribución y espaciado directamente en el HTML.
+
+---Organización de las clases de utilidad---
+
+Organicé las clases de Tailwind siguiendo un orden para facilitar la lectura y el mantenimiento del código:
+
+- Layout: clases que organizan los elementos, como flex, grid y block.
+- Espaciado: clases que controlan márgenes, rellenos y separaciones, como p-5, px-6, py-3 y gap-4.
+- Tipografía: clases que controlan el tamaño, peso y alineación del texto, como text-lg, font-bold y text-center.
+- Colores y apariencia: clases que establecen fondos, colores de texto, bordes y sombras, como bg-crema, text-azul-noche y rounded-full.
+- Estados y transiciones: clases que definen el comportamiento visual cuando el usuario interactúa con los elementos, como hover:brightness-95 y transition-colors.
+
+Esta organización facilita identificar la función de cada clase y mantener un código HTML más ordenado.
+
+---Generación del archivo CSS minificado---
+
+Para optimizar el CSS de la página, utilicé el comando --minify de Tailwind CLI:
+
+.\node_modules\.bin\tailwindcss.cmd -i ./src/input.css -o ./src/output.min.css --minify
+
+Este comando genera una versión minificada del archivo CSS, eliminando espacios y contenido innecesario para reducir su tamaño.
+
+El archivo output.min.css contiene los estilos necesarios para la página en una presentación más compacta.
+
+---Comparación del tamaño de los archivos mediante DevTools---
+
+Utilicé las herramientas de desarrollador del navegador, específicamente la pestaña Network, para revisar los recursos CSS y JavaScript cargados por cada página.
+
+- Tailwind CSS: se revisó el archivo CSS minificado generado para la página nocturna.
+- Bootstrap: se revisaron los archivos bootstrap.min.css, bootstrap-icons.min.css y bootstrap.bundle.min.js, además de la hoja de estilos personalizada style.css.
+
+---Comparación entre Bootstrap y Tailwind CSS---
+
+1. Curva de aprendizaje:
+Bootstrap me resultó más sencillo al principio porque ofrece componentes prediseñados y clases que permiten construir rápidamente elementos como botones, tarjetas y formularios. En cambio, Tailwind requiere conocer sus clases de utilidad y combinarlas para construir cada elemento.
+
+2. Personalización:
+Bootstrap permite desarrollar interfaces rápidamente, pero para conservar la identidad visual de Rueda Libre fue necesario combinar sus clases con CSS personalizado. Tailwind me permitió trabajar directamente con los colores, tipografías y estilos propios de la marca mediante las clases definidas en input.css.
+
+3. Tamaño y optimización:
+Tailwind genera únicamente los estilos correspondientes a las clases utilizadas en los archivos del proyecto, lo que permite evitar CSS innecesario. Bootstrap proporciona una hoja de estilos general con componentes y utilidades que pueden no utilizarse en su totalidad.
+
+4. Organización del código:
+Bootstrap permite construir interfaces utilizando componentes prediseñados, aunque algunas personalizaciones requieren escribir CSS adicional. Tailwind concentra gran parte de los estilos en las clases del HTML y permite reutilizar combinaciones mediante @apply.
+
+5. Casos de uso:
+Bootstrap es conveniente cuando se necesita desarrollar rápidamente un sitio con componentes comunes y una estructura consistente. Tailwind es conveniente cuando se busca mayor libertad para construir diseños personalizados y controlar detalladamente la apariencia de cada elemento.
+
+---Recomendación para Rueda Libre---
+Considero que Bootstrap es una buena opción para mantener el sitio principal de Rueda Libre, porque ya cuenta con una estructura desarrollada con este framework, componentes como tarjetas, botones y formularios, y un sistema de diseño responsivo que facilita el mantenimiento.
+
+Por otro lado, Tailwind CSS es una buena alternativa para páginas independientes o campañas específicas, como Rueda Nocturna, donde se busca una apariencia más personalizada y se necesita mayor control sobre los estilos.
+
+En conclusión, ambos frameworks son útiles, pero su elección depende de las necesidades del proyecto. Bootstrap facilita el desarrollo mediante componentes prediseñados, mientras que Tailwind ofrece mayor flexibilidad para construir una identidad visual propia.
 
