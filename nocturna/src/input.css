@@ -29,4 +29,18 @@
     --font-open-sans: "Open Sans", sans-serif;
 }
 
+/* Componentes reutilizables */
+@layer components {
+    .btn-ruta {
+        @apply flex w-full items-center justify-center bg-naranja-pedal text-azul-noche font-semibold text-center rounded-full border-2 border-naranja-pedal px-6 py-3 hover:brightness-95 transition-colors;
+    }
+
+    .btn-destacado {
+        @apply inline-flex items-center justify-center bg-amarillo-farol text-azul-noche font-bold px-6 py-3 rounded-full shadow-md hover:brightness-95 transition-colors;
+    }
+
+    .btn-destacado-grande {
+        @apply px-8 py-4 whitespace-nowrap;
+    }
+}
 
