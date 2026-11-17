@@ -316,9 +316,173 @@
                     </p>
                 </div>
 
-                <a href="mailto:hola@ruedalibre.example" class="btn-destacado btn-destacado-grande">
+                <a href="mailto:hola@ruedalibre.example" class="btn-destacado btn-destacado-grande cursor-pointer">
                     ¡Inscríbete ahora!
                 </a>
+            </div>
+        </section>
+
+        <section id="inscripcion" class="bg-crema dark:bg-fondo-nocturno py-16 px-4">
+            <div class="max-w-5xl mx-auto">
+                <!-- Encabezado -->
+                <div class="text-center mb-10">
+                    <p class="text-verde-ruta dark:text-amarillo-farol font-bold uppercase tracking-widest text-sm mb-2">
+                        Rueda Libre Nocturna
+                    </p>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-azul-noche dark:text-white mb-4">
+                        ¡Inscríbete a tu próxima aventura!
+                    </h2>
+
+                    <p class="text-gris-asfalto dark:text-texto-nocturno max-w-2xl mx-auto">
+                        Completa el formulario y asegura tu lugar en nuestras rutas nocturnas por Medellín.
+                    </p>
+                </div>
+
+                <!-- Formulariooo0 -->
+                <form action="#" method="get"
+                    class="bg-white dark:bg-tarjeta-nocturna p-6 md:p-10 rounded-2xl shadow-lg space-y-8">
+
+                    <!-- Datos personales -->
+                    <fieldset class="space-y-5">
+                        <legend class="text-xl font-bold text-azul-noche dark:text-white mb-4">
+                            Datos personales
+                        </legend>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                            <div>
+                                <label for="nombre" class="block font-semibold text-azul-noche dark:text-white mb-2">
+                                    Nombre completo
+                                </label>
+                                <input type="text" id="nombre" name="nombre"
+                                    placeholder="Ingresa tu nombre completo"
+                                    required minlength="3"
+                                    class="w-full rounded-lg border border-gris-asfalto/40 bg-crema dark:bg-fondo-nocturno text-azul-noche dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-verde-ruta">
+                            </div>
+
+                            <div>
+                                <label for="correo" class="block font-semibold text-azul-noche dark:text-white mb-2">
+                                    Correo electrónico
+                                </label>
+                                <input type="email" id="correo" name="correo"
+                                    placeholder="ejemplo@correo.com"
+                                    required
+                                    class="w-full rounded-lg border border-gris-asfalto/40 bg-crema dark:bg-fondo-nocturno text-azul-noche dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-verde-ruta">
+                            </div>
+
+                            <div>
+                                <label for="celular" class="block font-semibold text-azul-noche dark:text-white mb-2">
+                                    Número de celular
+                                </label>
+                                <input type="tel" id="celular" name="celular"
+                                    placeholder="3001234567"
+                                    required pattern="3[0-9]{9}"
+                                    title="Ingresa un número de 10 dígitos que comience por 3."
+                                    inputmode="numeric"
+                                    class="w-full rounded-lg border border-gris-asfalto/40 bg-crema dark:bg-fondo-nocturno text-azul-noche dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-verde-ruta">
+                            </div>
+
+                            <div>
+                                <label for="acompanantes" class="block font-semibold text-azul-noche dark:text-white mb-2">
+                                    Número de acompañantes
+                                </label>
+                                <input type="number" id="acompanantes" name="acompanantes"
+                                    min="0" max="3" required
+                                    class="w-full rounded-lg border border-gris-asfalto/40 bg-crema dark:bg-fondo-nocturno text-azul-noche dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-verde-ruta">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="space-y-5">
+                        <legend class="text-xl font-bold text-azul-noche dark:text-white mb-4">
+                            Datos de la ruta
+                        </legend>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="ruta" class="block font-semibold text-azul-noche dark:text-white mb-2">
+                                    Selecciona tu ruta
+                                </label>
+                                <select id="ruta" name="ruta" required
+                                        class="w-full rounded-lg border border-gris-asfalto/40 bg-crema dark:bg-fondo-nocturno text-azul-noche dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-verde-ruta">
+                                    <option value="">Selecciona una ruta</option>
+                                    <option value="luces-centro">Luces del Centro</option>
+                                    <option value="miradores">Miradores de la Ciudad</option>
+                                    <option value="tercera-ruta">Luna en las Palmas</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="dia" class="block font-semibold text-azul-noche dark:text-white mb-2">
+                                    Día de salida
+                                </label>
+                                <select id="dia" name="dia" required
+                                        class="w-full rounded-lg border border-gris-asfalto/40 bg-crema dark:bg-fondo-nocturno text-azul-noche dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-verde-ruta">
+                                    <option value="">Selecciona un día</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                    <option value="sabado">Sábado</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="experiencia" class="block font-semibold text-azul-noche dark:text-white mb-2">
+                                    Nivel de experiencia
+                                </label>
+                                <select id="experiencia" name="experiencia" required
+                                        class="w-full rounded-lg border border-gris-asfalto/40 bg-crema dark:bg-fondo-nocturno text-azul-noche dark:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-verde-ruta">
+                                    <option value="">Selecciona tu nivel</option>
+                                    <option value="principiante">Principiante</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="space-y-5">
+                        <legend class="text-xl font-bold text-azul-noche dark:text-white mb-4">
+                            Información adicional
+                        </legend>
+
+                        <div>
+                            <p class="font-semibold text-azul-noche dark:text-white mb-3">
+                                ¿Tienes bicicleta propia?
+                            </p>
+
+                            <div class="flex flex-wrap gap-6">
+                                <label class="flex items-center gap-2 text-azul-noche dark:text-white">
+                                    <input type="radio" name="bicicleta" value="si" required
+                                        class="accent-verde-ruta focus:ring-2 focus:ring-verde-ruta">
+                                    Sí
+                                </label>
+
+                                <label class="flex items-center gap-2 text-azul-noche dark:text-white">
+                                    <input type="radio" name="bicicleta" value="no"
+                                        class="accent-verde-ruta focus:ring-2 focus:ring-verde-ruta">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="flex items-start gap-3 text-azul-noche dark:text-white">
+                                <input type="checkbox" name="condiciones" required
+                                    class="mt-1 accent-verde-ruta focus:ring-2 focus:ring-verde-ruta">
+                                <span>
+                                    Acepto las condiciones de participación y las normas de seguridad de las rutas.
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="text-center pt-2">
+                        <button type="submit" class="btn-destacado px-8 py-4 cursor-pointer">
+                            Enviar inscripción
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
