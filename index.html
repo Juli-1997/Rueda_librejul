@@ -16,53 +16,57 @@
 
 <body style="font-family: 'Open Sans', sans-serif; background-color: #FAF6EF; color: #14213D; line-height: 1.6;">
     <header class="container-fluid py-3 border-bottom">
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm rounded-3 px-3 sticky-top">
+            <a href="index.html" class="navbar-brand text-decoration-none">
+                <h1 class="fs-2 fw-bold mb-0" style="font-family: 'Montserrat', sans-serif; color: #14213D;">
+                    Rueda Libre
+                </h1>
+            </a>
 
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm rounded-3 px-3 sticky-top">
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
 
-        <a href="index.html" class="navbar-brand text-decoration-none">
-            <h1 class="fs-2 fw-bold mb-0" style="font-family: 'Montserrat', sans-serif; color: #14213D;">
-                Rueda Libre
-            </h1>
-        </a>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Abrir menú de navegación">
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link nav-link-actual rounded-pill px-3 fw-semibold" aria-current="page">
+                            <i class="bi bi-house-door-fill me-1" aria-hidden="true"></i>
+                            Inicio
+                        </a>
+                    </li>
 
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                    <li class="nav-item">
+                        <a href="paginas/tarifas.html" class="nav-link rounded-pill px-3 fw-semibold">
+                            <i class="bi bi-bicycle me-1" aria-hidden="true"></i>
+                            Tarifas y rutas
+                        </a>
+                    </li>
 
-        <div class="collapse navbar-collapse" id="menuPrincipal">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link nav-link-actual rounded-pill px-3 fw-semibold" aria-current="page">
-                        <i class="bi bi-house-door-fill me-1" aria-hidden="true"></i>
-                        Inicio
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a href="paginas/reservas.html" class="nav-link rounded-pill px-3 fw-semibold">
+                            <i class="bi bi-calendar-check me-1" aria-hidden="true"></i>
+                            Reservas
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a href="paginas/tarifas.html" class="nav-link rounded-pill px-3 fw-semibold">
-                        <i class="bi bi-bicycle me-1" aria-hidden="true"></i>
-                        Tarifas y rutas
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="paginas/reservas.html" class="nav-link rounded-pill px-3 fw-semibold">
-                        <i class="bi bi-calendar-check me-1" aria-hidden="true"></i>
-                        Reservas
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-</header>
+                    <li class="nav-item">
+                        <a href="nocturna/index.html" class="nav-link rounded-pill px-3 fw-semibold">
+                            <i class="bi bi-moon-stars-fill me-1" aria-hidden="true"></i>
+                            Rueda Nocturna
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main class="container py-4">
         <section class="row align-items-center g-4 py-4">
@@ -219,6 +223,21 @@
             </div>
         </div>
 
+        <div class="carousel-item">
+            <a href="nocturna/index.html">
+                <img src="../img/cieloestrellado.jpg" class="d-block w-100" alt="Cielo estrellado que anuncia la 
+                    experiencia Rueda Nocturna">
+            </a>
+
+            <div class="carousel-caption">
+                <h2>¡Descubre Rueda Nocturna!</h2>
+                <p>Vive Medellín sobre dos ruedas bajo las estrellas.</p>
+                <a href="nocturna/index.html" class="btn btn-warning rounded-pill fw-semibold">
+                    Conoce la experiencia
+                </a>
+            </div>
+        </div>
+
     </div>
 
     <div class="carousel-indicators">
@@ -233,6 +252,10 @@
         <button type="button" data-bs-target="#carruselPromociones"
                 data-bs-slide-to="2"
                 aria-label="Promoción 3"></button>
+
+        <button type="button" data-bs-target="#carruselPromociones"
+                data-bs-slide-to="3"
+                aria-label="Promoción 4"></button>        
     </div>
 
     <button class="carousel-control-prev" type="button"

@@ -373,5 +373,6 @@ Por otro lado, Tailwind CSS es una buena alternativa para páginas independiente
 En conclusión, ambos frameworks son útiles, pero su elección depende de las necesidades del proyecto. Bootstrap facilita el desarrollo mediante componentes prediseñados, mientras que Tailwind ofrece mayor flexibilidad para construir una identidad visual propia.
 
 ----DÍA 3---
--Tiempo de hacer el formulario de rueda nocturna: 24 minutos.
+-Reto 9-Tiempo de hacer el formulario de rueda nocturna: 24 minutos.
 
+-Reto 10- Tiempo en conectar bootstrap con tailwindcss: 19:13 minutos.
