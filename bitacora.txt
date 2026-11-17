@@ -376,3 +376,6 @@ En conclusión, ambos frameworks son útiles, pero su elección depende de las n
 -Reto 9-Tiempo de hacer el formulario de rueda nocturna: 24 minutos.
 
 -Reto 10- Tiempo en conectar bootstrap con tailwindcss: 19:13 minutos.
+
+-Reto 11- Tiempo para crear la seccion de plan de reuda Nocturna: 30:39 minutos.
+
